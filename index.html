@@ -26,28 +26,46 @@
 <link href="/splashscreens/ipadpro3_splash.png" media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
 <link href="/splashscreens/ipadpro2_splash.png" media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
 
-<!-- webapp style settings -->
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
+<!-- webapp import resources -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,500,500i,700,700i">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 <link rel="stylesheet" href="/css/style.css">
 
-<!-- HTML content -->
-<body>
+<!-- scripts -->
+<script>
+$(document).ready(function(){
+	$("#menu").click(function(){
+		$("#navigation-menu").slideToggle('medium', function(){
+			if($(this).is(':visible')){
+				$(this).css('display','flex');
+			}
+		});
+	});
+});
+</script>
 
+<body>
 <div id="wrapper">
-	<header>
-		Header
-	</header>
-	<nav>
-		Nav
-	</nav>
-	<section id="content">
-		Content
-	</section>
-	<footer>
-		Footer
-	</footer>
+	<div id="navigation">
+		<div >Anesthesie</div>
+		<div id="menu"><span class="material-icons">toc</span></div>
+	</div>
+	<div id="navigation-menu">
+		<div >Hypnotica</div>
+		<div >Analgetica</div>
+		<div >Relaxantia</div>
+		<div >Vasoactiva</div>
+		<div >Lokale Anesthetica</div>
+		<div >Maat & getal</div>
+	</div>
+	<div id="content">
+		
+	</div>
+	<div id="footer">
+		
+	</div>
 </div>   
 
 </body>
 </html>
-<!-- Have a nice day! -->
