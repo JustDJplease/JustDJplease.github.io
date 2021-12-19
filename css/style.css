@@ -1,2 +1,46 @@
-body, html {height: 100%}
+body, html {height: 100%; margin: 0px;}
 body {font-family: "Open Sans", sans-serif}
+
+/*
+	Colours:
+		Dark-red: d90429
+		Red: ef233c
+		White: edf2f4
+		Gray: 8d99ae
+		Dark-gray: 2b2d42
+*/
+
+#wrapper {
+	height: 100%;
+}
+
+#navigation {
+	display: flex;
+	justify-content: space-between;
+	padding-top: 30px;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-bottom: 20px;
+	background-color: #d90429;
+	color: #ffffff;
+	font-size: 24px;
+	font-weight: 300;
+}
+
+#navigation-menu {
+	display: none;
+	flex-direction: column;
+	gap: 10px;
+	padding: 20px;
+	background-color: #edf2f4;
+	font-size: 20px;
+	font-weight: 300;
+}
+
+#content {
+	min-width: 100%;
+}
+
+#footer {
+	min-width: 100%;
+}
