@@ -35,6 +35,7 @@
 <!-- scripts -->
 <script>
 $(document).ready(function(){
+	// Functionality for navigation menu.
 	$("#menu").click(function(){
 		$("#navigation-menu").slideToggle('medium', function(){
 			if($(this).is(':visible')){
@@ -42,8 +43,50 @@ $(document).ready(function(){
 			}
 		});
 	});
+	
+	// Functionality for 'back to top' button.
 	$("#footer").click(function(){
-		window.scrollTo({top: 0, behavior: 'smooth'});
+		$('body').scrollTo(0);
+	});
+	
+	// Hiding the 'back-to-top' button when the screen is all the way on top.
+	$("body").on('scroll', function(){
+		if($(this).scrollTop == 0){
+			$('#footer').fadeOut();
+		}else{
+			if($('#footer').is(':visible')){
+				// Do nothing
+			}else{
+				$('#footer').fadeIn();
+			}
+		}
+	});
+	
+	// Functionality for individual content sections.
+	// Suggestion: Use parent div to get child-div name?
+	$("#hypnotica").click(function(){
+		document.getElementById("content").innerHTML = "";
+		$( "#content" ).load( "content/hypnotica.html" );
+	});
+	$("#analgetica").click(function(){
+		document.getElementById("content").innerHTML = "";
+		$( "#content" ).load( "content/analgetica.html" );
+	});
+	$("#relaxantia").click(function(){
+		document.getElementById("content").innerHTML = "";
+		$( "#content" ).load( "content/relaxantia.html" );
+	});
+	$("#vasoactiva").click(function(){
+		document.getElementById("content").innerHTML = "";
+		$( "#content" ).load( "content/vasoactiva.html" );
+	});
+	$("#lokaleAnesthetica").click(function(){
+		document.getElementById("content").innerHTML = "";
+		$( "#content" ).load( "content/lokaleAnesthetica.html" );
+	});
+	$("#maatEnGetal").click(function(){
+		document.getElementById("content").innerHTML = "";
+		$( "#content" ).load( "content/maatEnGetal.html" );
 	});
 });
 </script>
@@ -55,38 +98,15 @@ $(document).ready(function(){
 		<div id="menu"><span class="material-icons">toc</span></div>
 	</div>
 	<div id="navigation-menu">
-		<div >Hypnotica</div>
-		<div >Analgetica</div>
-		<div >Relaxantia</div>
-		<div >Vasoactiva</div>
-		<div >Lokale Anesthetica</div>
-		<div >Maat & getal</div>
+		<div id="hypnotica">Hypnotica</div>
+		<div id="analgetica">Analgetica</div>
+		<div id="relaxantia">Relaxantia</div>
+		<div id="vasoactiva">Vasoactiva</div>
+		<div id="lokaleAnesthetica">Lokale Anesthetica</div>
+		<div id="maatEnGetal">Maat & getal</div>
 	</div>
 	<div id="content">
-		<div id="hypnotica">
-			<h1>Hypnotica</h1>
-			<p>...</p>
-		</div>
-		<div id="analgetica">
-			<h1>Analgetica</h1>
-			<p>...</p>
-		</div>
-		<div id="relaxantia">
-			<h1>Relaxantia</h1>
-			<p>...</p>
-		</div>
-		<div id="vasoactiva">
-			<h1>Vasoactiva</h1>
-			<p>...</p>
-		</div>
-		<div id="lokaleAnesthetica">
-			<h1>Lokale Anesthetica</h1>
-			<p>...</p>
-		</div>
-		<div id="maatEnGetal">
-			<h1>Maat & Getal</h1>
-			<p>...</p>
-		</div>
+		<!-- Content is generated here -->
 	</div>
 	<div id="footer"><span class="material-icons">arrow_upward</span></div>
 </div>   
