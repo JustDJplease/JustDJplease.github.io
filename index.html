@@ -58,6 +58,9 @@ $(document).ready(function(){
 				// Do nothing
 			}else{
 				$('#footer').fadeIn();
+				if($('#footer').is(':visible')){
+					$('#footer').css('display','flex');
+				}
 			}
 		}
 	});
