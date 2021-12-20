@@ -46,12 +46,12 @@ $(document).ready(function(){
 	
 	// Functionality for 'back to top' button.
 	$("#footer").click(function(){
-		$('body').scrollTo(0);
+		$("html, body").animate({ scrollTop: "0" }, 1000);
 	});
 	
 	// Hiding the 'back-to-top' button when the screen is all the way on top.
 	$("body").on('scroll', function(){
-		if($(this).scrollTop == 0){
+		if($(this).scrollTop.val() == "0"){
 			$('#footer').fadeOut();
 		}else{
 			if($('#footer').is(':visible')){
