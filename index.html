@@ -60,11 +60,15 @@ $(document).ready(function(){
 				.load("content/" + id + ".html")
 				.fadeIn('250');
 			currentlyViewing = id;
+       			$(id).addClass('active');
 		}
 		$("#navigation-menu").slideToggle({
 			duration: 250,
 			start: function() {
 				$(this).css('display','flex');
+			},
+			done: function(){
+				$(id).removeClass('active');
 			}
 		});
 	});
