@@ -52,6 +52,12 @@ $(document).ready(function(){
 		});
 	});
 	
+	$("#logo").click(function(){
+		$("#content").fadeOut('250');
+		document.getElementById("content").innerHTML = "";
+		currentlyViewing = "";
+	});
+	
 	$("#navigation-menu").click(function(){
 		var id = event.target.id;
 		if(currentlyViewing !== id){
@@ -101,7 +107,7 @@ $(document).ready(function(){
 <body>
 <div id="wrapper">
 	<div id="navigation">
-		<div >Anesthesie</div>
+		<div id="logo">Anesthesie</div>
 		<div id="menu"><span class="material-icons">toc</span></div>
 	</div>
 	<div id="navigation-menu">
