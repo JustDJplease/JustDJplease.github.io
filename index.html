@@ -35,61 +35,60 @@
 <!-- scripts -->
 <script>
 $(document).ready(function(){
-	// Functionality for navigation menu.
+
+	// ---------------------------------- //
+	// Functionality for navigation menu. //
+	// ---------------------------------- //
+	
+	var currentlyViewing = "";
+	
 	$("#menu").click(function(){
-		$("#navigation-menu").slideToggle('medium', function(){
-			if($(this).is(':visible')){
+		$("#navigation-menu").slideToggle({
+			duration: 250,
+			start: function() {
 				$(this).css('display','flex');
 			}
 		});
 	});
 	
-	// Functionality for 'back to top' button.
+	$("#navigation-menu").click(function(){
+		var id = event.target.id;
+		if(currentlyViewing !== id){
+			document.getElementById("content").innerHTML = "";
+			$( "#content" )
+				.hide()
+				.load( "https://justdjplease.github.io/content/" + id + ".html" )
+				.fadeIn('250');
+			currentlyViewing = id;
+		}
+		$("#navigation-menu").slideToggle({
+			duration: 250,
+			start: function() {
+				$(this).css('display','flex');
+			}
+		});
+	});
+	
+	// ---------------------------------- //
+	// Functionality for to-top-button.   //
+	// ---------------------------------- //
+	
 	$("#footer").click(function(){
 		$("html, body").animate({ scrollTop: "0" }, 1000);
 	});
 	
-	// Hiding the 'back-to-top' button when the screen is all the way on top.
-	$("body").on('scroll', function(){
-		if($(this).scrollTop.val() == "0"){
+	$(window).scroll(function(){
+		console.log("scrolled");
+		if($(this).scrollTop() === 0){
 			$('#footer').fadeOut();
 		}else{
-			if($('#footer').is(':visible')){
-				// Do nothing
-			}else{
+			if($('#footer').not(':visible')){
 				$('#footer').fadeIn();
 				if($('#footer').is(':visible')){
 					$('#footer').css('display','flex');
 				}
 			}
 		}
-	});
-	
-	// Functionality for individual content sections.
-	// Suggestion: Use parent div to get child-div name?
-	$("#hypnotica").click(function(){
-		document.getElementById("content").innerHTML = "";
-		$( "#content" ).load( "content/hypnotica.html" );
-	});
-	$("#analgetica").click(function(){
-		document.getElementById("content").innerHTML = "";
-		$( "#content" ).load( "content/analgetica.html" );
-	});
-	$("#relaxantia").click(function(){
-		document.getElementById("content").innerHTML = "";
-		$( "#content" ).load( "content/relaxantia.html" );
-	});
-	$("#vasoactiva").click(function(){
-		document.getElementById("content").innerHTML = "";
-		$( "#content" ).load( "content/vasoactiva.html" );
-	});
-	$("#lokaleAnesthetica").click(function(){
-		document.getElementById("content").innerHTML = "";
-		$( "#content" ).load( "content/lokaleAnesthetica.html" );
-	});
-	$("#maatEnGetal").click(function(){
-		document.getElementById("content").innerHTML = "";
-		$( "#content" ).load( "content/maatEnGetal.html" );
 	});
 });
 </script>
