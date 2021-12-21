@@ -37,7 +37,7 @@ body {font-family: "Open Sans", sans-serif}
 	font-weight: 300;
 }
 
-#navigation-menu-item:active {
+.navigation-menu-item:active {
 	background-color: #8d99ae;
 }
 
