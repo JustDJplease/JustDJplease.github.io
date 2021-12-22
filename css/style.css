@@ -93,6 +93,10 @@ table{
 	border-bottom-right-radius: 10px;
 }
 
+.check{
+	width: 25px;	
+}
+
 th{
   padding: 10px 15px;
   text-align: left;
