@@ -6,7 +6,9 @@ body, html {
  body {
     font-family: "Open Sans", sans-serif
 }
+
 /* Colours: Dark-red: d90429 Red: ef233c White: edf2f4 Gray: 8d99ae Dark-gray: 2b2d42 */
+
  #wrapper {
      min-height: 100%;
      background-color: #fff;
@@ -100,4 +102,13 @@ body, html {
  tr:nth-child(even) {
      background-color: #edf2f4;
 }
- 
+.highlight{
+	background-color: #ef233c;
+    color: #ffffff;
+    font-weight: 500;
+    padding-top: 1px;
+    padding-bottom: 2px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 10px;
+}
