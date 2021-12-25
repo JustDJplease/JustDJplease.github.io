@@ -91,12 +91,12 @@ $(document).ready(function(){
 	function updateBreadCrumbs() {
 		if(previousWindow !== ""){
 			if($('#breadcrumbs').not(':visible')){
-				$('#breadcrumbs').slideIn();
+				$('#breadcrumbs').slideDown();
 			}
 			document.getElementById("breadcrumbs").innerHTML = "<span class=\"material-icons\">arrow_left</span>&nbsp" + previousWindow;	
 		}else{
 			if($('#breadcrumbs').is(':visible')){
-				$('#breadcrumbs').slideOut();
+				$('#breadcrumbs').slideUp();
 			}
 		}
 	}
