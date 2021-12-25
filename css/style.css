@@ -37,6 +37,16 @@ body, html {
  .navigation-menu-item:active {
      background-color: #8d99ae;
 }
+
+#breadcrumbs{
+	padding: 5px;
+	padding-left: 20px;
+	color: #ffffff;
+	background-color: #edf2f4;
+     	font-size: 20px;
+     	font-weight: 300;
+}
+
  #content {
      font-size: 16px;
      font-weight: 300;
