@@ -13,19 +13,6 @@
 
 <!-- Web-app icon -->
 <link rel="apple-touch-icon" href="/img/icon.png">
-
-<!-- Web-app splash screen settings -->
-<link href="/splashscreens/iphone5_splash.png" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
-<link href="/splashscreens/iphone6_splash.png" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
-<link href="/splashscreens/iphoneplus_splash.png" media="(device-width: 621px) and (device-height: 1104px) and (-webkit-device-pixel-ratio: 3)" rel="apple-touch-startup-image" />
-<link href="/splashscreens/iphonex_splash.png" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3)" rel="apple-touch-startup-image" />
-<link href="/splashscreens/iphonexr_splash.png" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
-<link href="/splashscreens/iphonexsmax_splash.png" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3)" rel="apple-touch-startup-image" />
-<link href="/splashscreens/ipad_splash.png" media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
-<link href="/splashscreens/ipadpro1_splash.png" media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
-<link href="/splashscreens/ipadpro3_splash.png" media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
-<link href="/splashscreens/ipadpro2_splash.png" media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
-<link href="/splashscreens/iphone12_splash.png" media="(device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3)" rel="apple-touch-startup-image" />
 	
 <!-- webapp import resources -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -37,6 +24,9 @@
 <script>
 $(document).ready(function(){
 
+	var currentlyViewing = "main";
+	var previousWindow = "";
+	
 	// ---------------------------------- //
 	// Setting up AJAX.                   //
 	// ---------------------------------- //
@@ -49,7 +39,6 @@ $(document).ready(function(){
 	// Functionality for navigation menu. //
 	// ---------------------------------- //
 	
-	var currentlyViewing = "main";
 	$("#content").load("content/main.html").fadeIn('250');
 	
 	$("#menu").click(function(){
@@ -70,6 +59,8 @@ $(document).ready(function(){
 				.load("content/" + id + ".html")
 				.fadeIn('250');
 			currentlyViewing = id;
+			previousWindow = "";
+			updateBreadCrumbs();
   		}
 	});
 	
@@ -81,18 +72,45 @@ $(document).ready(function(){
 				.hide()
 				.load("content/" + id + ".html")
 				.fadeIn('250');
+			previousWindow = currentlyViewing;
 			currentlyViewing = id;
-       			$(id).addClass('active');
+			updateBreadCrumbs();
 		}
 		$("#navigation-menu").slideToggle({
 			duration: 250,
 			start: function() {
 				$(this).css('display','flex');
-			},
-			done: function(){
-				$(id).removeClass('active');
 			}
 		});
+	});
+	
+	// ---------------------------------- //
+	// Functionality for breadcrumbs.     //
+	// ---------------------------------- //
+	
+	function updateBreadCrumbs(){
+		if(previousWindow !== ""){
+			if($('#breadcrumbs').not(':visible')){
+				$('#breadcrumbs').slideIn();
+			}
+			document.getElementById("breadcrumbs").innerHTML = "<span class="material-icons">arrow_left</span>&nbsp" + previousWindow;	
+		}else{
+			if($('#breadcrumbs').is(':visible')){
+				$('#breadcrumbs').slideOut();
+			}
+		}
+	}
+	
+	$("#breadcrumbs").click(function(){
+		if(previousWindow !== ""){
+			$( "#content" )
+				.hide()
+				.load("content/" + previousWindow + ".html")
+				.fadeIn('250');
+			currentlyViewing = previousWindow;
+			previousWindow = "";
+			updateBreadCrumbs();
+		}
 	});
 	
 	// ---------------------------------- //
@@ -124,6 +142,7 @@ $(document).ready(function(){
 		<div id="logo">Anesthesie</div>
 		<div id="menu"><span class="material-icons">toc</span></div>
 	</div>
+	<div id="breadcrumbs"></div>
 	<div id="navigation-menu">
 		<div class="navigation-menu-item" id="hypnotica">Hypnotica</div>
 		<div class="navigation-menu-item" id="analgetica">Analgetica</div>
