@@ -21,121 +21,9 @@
 <link rel="stylesheet" href="/css/style.css">
 
 <!-- scripts -->
-<script>
-$(document).ready(function(){
+<script src="/js/script.js" type="text/javascript"></script>
 
-	var currentlyViewing = "main";
-	var previousWindow = "";
-	
-	// ---------------------------------- //
-	// Setting up AJAX.                   //
-	// ---------------------------------- //
-	
-	$.ajaxSetup ({
-	    cache: false
-	});
-	
-	// ---------------------------------- //
-	// Functionality for navigation menu. //
-	// ---------------------------------- //
-	
-	$("#content").load("content/main.html").fadeIn('250');
-	
-	$("#menu").click(function(){
-		$("#navigation-menu").slideToggle({
-			duration: 250,
-			start: function() {
-				$(this).css('display','flex');
-			}
-		});
-	});
-	
-	$("#logo").click(function(){
-		var id = "main";
-		if(currentlyViewing !== id){
-			document.getElementById("content").innerHTML = "";
-			$( "#content" )
-				.hide()
-				.load("content/" + id + ".html")
-				.fadeIn('250');
-			currentlyViewing = id;
-			previousWindow = "";
-			updateBreadCrumbs();
-  		}
-	});
-	
-	$("#navigation-menu").click(function(){
-		var id = event.target.id;
-		if(currentlyViewing !== id){
-			document.getElementById("content").innerHTML = "";
-			$( "#content" )
-				.hide()
-				.load("content/" + id + ".html")
-				.fadeIn('250');
-			previousWindow = currentlyViewing;
-			currentlyViewing = id;
-			updateBreadCrumbs();
-		}
-		$("#navigation-menu").slideToggle({
-			duration: 250,
-			start: function() {
-				$(this).css('display','flex');
-			}
-		});
-	});
-	
-	// ---------------------------------- //
-	// Functionality for breadcrumbs.     //
-	// ---------------------------------- //
-	
-	function updateBreadCrumbs() {
-		if(previousWindow !== ""){
-			if($('#breadcrumbs').not(':visible')){
-				$('#breadcrumbs').slideDown();
-			}
-			document.getElementById("breadcrumbs").innerHTML = "<span class=\"material-icons\">arrow_left</span>&nbsp" + previousWindow;	
-		}else{
-			if($('#breadcrumbs').is(':visible')){
-				$('#breadcrumbs').slideUp();
-			}
-		}
-	}
-	
-	$("#breadcrumbs").click(function(){
-		if(previousWindow !== ""){
-			$( "#content" )
-				.hide()
-				.load("content/" + previousWindow + ".html")
-				.fadeIn('250');
-			currentlyViewing = previousWindow;
-			previousWindow = "";
-			updateBreadCrumbs();
-		}
-	});
-	
-	// ---------------------------------- //
-	// Functionality for to-top-button.   //
-	// ---------------------------------- //
-	
-	$("#footer").click(function(){
-		$("html, body").animate({ scrollTop: "0" }, 1000);
-	});
-	
-	$(window).scroll(function(){
-		if($(this).scrollTop() === 0){
-			$('#footer').fadeOut();
-		}else{
-			if($('#footer').not(':visible')){
-				$('#footer').fadeIn();
-				if($('#footer').is(':visible')){
-					$('#footer').css('display','flex');
-				}
-			}
-		}
-	});
-});
-</script>
-
+<!-- html -->
 <body>
 <div id="wrapper">
 	<div id="navigation">
@@ -157,6 +45,5 @@ $(document).ready(function(){
 	</div>
 	<div id="footer"><span class="material-icons">arrow_upward</span></div>
 </div>   
-
 </body>
 </html>
