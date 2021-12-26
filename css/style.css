@@ -42,9 +42,9 @@ body, html {
 	display: none;
 	padding: 5px;
 	padding-left: 20px;
-	color: #ffffff;
+	color: #000;
 	background-color: #edf2f4;
-     	font-size: 20px;
+     	font-size: 14px;
      	font-weight: 300;
 }
 
