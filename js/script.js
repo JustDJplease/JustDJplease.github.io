@@ -9,7 +9,20 @@ $(document).ready(function() {
    var breadcrumbsHTML = "";
    var author = "Floris";
    var lastUpdate = "26 dec 2021";
+   
+   // ---------------------------------- //
+   // Debug.                             //
+   // ---------------------------------- //
 
+   function debug(){
+      console.log("---");
+      console.log(currentlyViewing);
+      console.log(displayBreadcrumbs);
+      console.log(breadcrumbsHTML);
+      console.log(author);
+      console.log(lastUpdate);
+   }
+      
    // ---------------------------------- //
    // Setting up AJAX.                   //
    // ---------------------------------- //
@@ -49,6 +62,7 @@ $(document).ready(function() {
    // ---------------------------------- //
 
    function updateBreadCrumbs() {
+      debug();
       if (displayBreadcrumbs) {
 
          // Adjust content of breadcrumbs.
