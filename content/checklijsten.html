@@ -1,58 +1,77 @@
-<h1>Checklijsten</h1>
-<div class="tbl-header">
-<table>
-   <thead>
-      <tr>
-         <th>Voorbereiding anesthesie</th>
-      </tr>
-   </thead>  
-</table>
-</div>
-<div class="tbl-content">
-<table>
-   <tbody>
-      <tr>
-         <td class="check"><input type="checkbox"></td>
-         <td>Suction</td>
-      </tr>
-      <tr>
-         <td class="check"><input type="checkbox"></td>
-         <td>Circulation (Bloed &amp; urinekatheter)</td>
-      </tr>
-      <tr>
-         <td class="check"><input type="checkbox"></td>
-         <td>Oxygen (Beademingsapparatuur)</td>
-      </tr>
-      <tr>
-         <td class="check"><input type="checkbox"></td>
-         <td>Monitoring</td>
-      </tr>
-      <tr>
-         <td class="check"><input type="checkbox"></td>
-         <td>Laryngoscope</td>
-      </tr>
-      <tr>
-         <td class="check"><input type="checkbox"></td>
-         <td>Airway (Masker, mayo, ET &amp; LMA)</td>
-      </tr>
-      <tr>
-         <td class="check"><input type="checkbox"></td>
-         <td>Drugs</td>
-      </tr>
-      <tr>
-         <td class="check"><input type="checkbox"></td>
-         <td>Infusion</td>
-      </tr>
-      <tr>
-         <td class="check"><input type="checkbox"></td>
-         <td>Temperature</td>
-      </tr>
-   </tbody>
-</table>
-</div>
-<p id="reset"><span class="highlight">Clear</span></p>
+<script>
+   // ---------------------------------- //
+   //             Settings               //
+   // ---------------------------------- //
+   
+   // Should this page display a breadcrumbs-bar?
+   var displayBreadcrumbs = true;
+   
+   // What links should be displayed inside the bar?
+   var breadcrumbsHTML = [{main, "Home"}];
+   
+   // Who authored this page?
+   var author = "Floris";
+   
+   // When was this page updated last?
+   var lastUpdate = "26 dec 2021";
+</script>
+
 <script>
    $('#reset').click(function(){
       $('input:checkbox').removeAttr('checked');
    });
 </script>
+
+<h1>Checklijsten</h1>
+<div class="tbl-header">
+   <table>
+      <thead>
+         <tr>
+            <th>Voorbereiding anesthesie</th>
+         </tr>
+      </thead>
+   </table>
+</div>
+<div class="tbl-content">
+   <table>
+      <tbody>
+         <tr>
+            <td class="check"><input type="checkbox"></td>
+            <td>Suction</td>
+         </tr>
+         <tr>
+            <td class="check"><input type="checkbox"></td>
+            <td>Circulation (Bloed &amp; urinekatheter)</td>
+         </tr>
+         <tr>
+            <td class="check"><input type="checkbox"></td>
+            <td>Oxygen (Beademingsapparatuur)</td>
+         </tr>
+         <tr>
+            <td class="check"><input type="checkbox"></td>
+            <td>Monitoring</td>
+         </tr>
+         <tr>
+            <td class="check"><input type="checkbox"></td>
+            <td>Laryngoscope</td>
+         </tr>
+         <tr>
+            <td class="check"><input type="checkbox"></td>
+            <td>Airway (Masker, mayo, ET &amp; LMA)</td>
+         </tr>
+         <tr>
+            <td class="check"><input type="checkbox"></td>
+            <td>Drugs</td>
+         </tr>
+         <tr>
+            <td class="check"><input type="checkbox"></td>
+            <td>Infusion</td>
+         </tr>
+         <tr>
+            <td class="check"><input type="checkbox"></td>
+            <td>Temperature</td>
+         </tr>
+      </tbody>
+   </table>
+</div>
+<p id="reset"><span class="highlight">Clear</span></p>
