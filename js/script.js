@@ -51,6 +51,11 @@ $(document).ready(function() {
       var breadcrumbs = $("#settings").data("breadcrumbs");
       var breadcrumbsContent = $("#settings").data("breadcrumbsContent");
       
+      console.log(author);
+      console.log(lastUpdate);
+      console.log(breadcrumbs);
+      console.log(breadcrumbsContent);
+      
       if (breadcrumbs) {
 
          // Adjust content of breadcrumbs.
