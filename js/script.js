@@ -66,6 +66,9 @@ $(document).ready(function() {
    // ---------------------------------- //
 
    function updateBreadCrumbs() {
+      
+      $("h1").hide();
+      
       console.log("breadCrumbs function is called");
       debug();
       
