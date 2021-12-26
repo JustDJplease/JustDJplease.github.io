@@ -33,7 +33,7 @@ $(document).ready(function() {
    }
 
    // --> Clear the content section.
-   function clearContent()[
+   function clearContent() {
       document.getElementById("content").innerHTML = "";
    }
 
