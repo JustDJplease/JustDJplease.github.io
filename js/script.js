@@ -53,9 +53,8 @@ $(document).ready(function() {
    // --> Load new data into the content section.
    function loadContent(id) {
       console.log("Started loading a new page");
-      $("#content").hide().load("content/" + id + ".html").fadeIn('250');
+      $("#content").hide().load("content/" + id + ".html").fadeIn('250').updateBreadCrumbs();
       console.log("Finished loading a new page");
-      updateBreadCrumbs();
       currentlyViewing = id;
    }
 
