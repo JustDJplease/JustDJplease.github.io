@@ -66,7 +66,7 @@ $(document).ready(function() {
             console.log(index, item);
             var goto = item;
             var title = breadcrumbsListTitles[index];
-            crumbs = crumbs + "<span class=\"material-icons\">arrow_left</span><span class="crumb" data-goto=\"" + goto + "\">&nbsp" + title + "</span>";
+            crumbs = crumbs + "<span class=\"material-icons\">arrow_left</span><span class=\"crumb\" data-goto=\"" + goto + "\">&nbsp" + title + "</span>";
          });
          document.getElementById("breadcrumbs").innerHTML = "" + crumbs;
 
