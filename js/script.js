@@ -4,18 +4,18 @@ $(document).ready(function() {
    // Variables.                         //
    // ---------------------------------- //
 
-   var currentlyViewing = "";
-   var displayBreadcrumbs = false;
-   var breadcrumbsHTML = "";
-   var author = "Floris";
-   var lastUpdate = "26 dec 2021";
+   var currentlyViewing;
+   var displayBreadcrumbs;
+   var breadcrumbsHTML;
+   var author;
+   var lastUpdate;
    
    // ---------------------------------- //
    // Debug.                             //
    // ---------------------------------- //
 
    function debug(){
-      console.log("---");
+      console.log("===========vvvvvvvv=============");
       console.log(currentlyViewing);
       console.log(displayBreadcrumbs);
       console.log(breadcrumbsHTML);
@@ -52,7 +52,9 @@ $(document).ready(function() {
 
    // --> Load new data into the content section.
    function loadContent(id) {
-      $("#content").hide().load("content/" + id + ".html").fadeIn('250');
+      console.log("Started loading a new page");
+      $("#content").hide().load("content/" + id + ".html", updateBreadCrumbs()).fadeIn('250');
+      console.log("Finisched loading a new page");
       currentlyViewing = id;
    }
 
@@ -61,7 +63,9 @@ $(document).ready(function() {
    // ---------------------------------- //
 
    function updateBreadCrumbs() {
+      console.log("breadCrumbs function is called");
       debug();
+      
       if (displayBreadcrumbs) {
 
          // Adjust content of breadcrumbs.
