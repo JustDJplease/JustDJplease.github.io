@@ -54,6 +54,7 @@ $(document).ready(function() {
    function loadContent(id) {
       $("#content").hide().load("content/" + id + ".html").fadeIn('250');
       currentlyViewing = id;
+      run();
       updateBreadCrumbs();
    }
 
