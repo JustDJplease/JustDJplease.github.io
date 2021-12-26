@@ -58,7 +58,7 @@ $(document).ready(function() {
       currentlyViewing = id;
       
       // Show breadcrumbs after 1 second.
-      setTimeout(updateBreadCrumbs(), 1000);
+      setTimeout(updateBreadCrumbs(), 10000);
    }
 
    // ---------------------------------- //
