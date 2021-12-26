@@ -5,23 +5,6 @@ $(document).ready(function() {
    // ---------------------------------- //
 
    var currentlyViewing;
-   var displayBreadcrumbs;
-   var breadcrumbsHTML;
-   var author;
-   var lastUpdate;
-   
-   // ---------------------------------- //
-   // Debug.                             //
-   // ---------------------------------- //
-
-   function debug(){
-      console.log("===========vvvvvvvv=============");
-      console.log(currentlyViewing);
-      console.log(displayBreadcrumbs);
-      console.log(breadcrumbsHTML);
-      console.log(author);
-      console.log(lastUpdate);
-   }
       
    // ---------------------------------- //
    // Setting up AJAX.                   //
@@ -67,14 +50,16 @@ $(document).ready(function() {
 
    function updateBreadCrumbs() {
      
-      console.log("breadCrumbs function is called");
-      console.log($("#settings").data());
+      var author = $("#settings").data("author");
+      var lastUpdate = $("#settings").data("lastUpdate");
+      var breadcrumbs = $("#settings").data("breadcrumbs");
+      var breadcrumbsContent = $("#settings").data("breadcrumbsContent");
       
-      if (displayBreadcrumbs) {
+      if (breadcrumbs) {
 
          // Adjust content of breadcrumbs.
          var crumbs = "";
-         breadcrumbsHTML.forEach(function(item, index) {
+         breadcrumbsContent.forEach(function(item, index) {
             console.log(index, item);
             var goto = item[0];
             var title = item[1];
