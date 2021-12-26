@@ -52,7 +52,7 @@ $(document).ready(function() {
 
    // --> Load new data into the content section.
    function loadContent(id) {
-      $("#content").hide().load("content/" + id + ".html", updateBreadCrumbs()).fadeIn('250');
+      $("#content").hide().load("content/" + id + ".html").fadeIn('250');
       currentlyViewing = id;
    }
 
