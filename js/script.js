@@ -45,25 +45,27 @@ $(document).ready(function() {
    // ---------------------------------- //
 
    function updateBreadCrumbs() {
-     
+      
       var author = $("#settings").data("author");
       var lastUpdate = $("#settings").data("lastUpdate");
       var breadcrumbs = $("#settings").data("breadcrumbs");
-      var breadcrumbsContent = $("#settings").data("breadcrumbsContent");
+      var breadcrumbsListLinks = $("#settings").data("breadcrumbs-list-links");
+      var breadcrumbsListTitles = $("#settings").data("breadcrumbs-list-titles");
       
       console.log(author);
       console.log(lastUpdate);
       console.log(breadcrumbs);
-      console.log(breadcrumbsContent);
+      console.log(breadcrumbsListLinks);
+      console.log(breadcrumbsListTitles);
       
       if (breadcrumbs) {
 
          // Adjust content of breadcrumbs.
          var crumbs = "";
-         breadcrumbsContent.forEach(function(item, index) {
+         breadcrumbsListLinks.forEach(function(item, index) {
             console.log(index, item);
-            var goto = item[0];
-            var title = item[1];
+            var goto = item;
+            var title = breadcrumbsListTitles[index];
             crumbs = crumbs + "<div data-goto=\"" + goto + "\"><span class=\"material-icons\">arrow_left</span>&nbsp" + title + "</div>";
          });
          document.getElementById("breadcrumbs").innerHTML = "" + crumbs;
