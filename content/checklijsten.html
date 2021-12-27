@@ -9,9 +9,15 @@
 </article>
 
 <script>
+$(document).ready(function(){
+   console.log("--> Loaded script in extra file.");
    $('#reset').click(function(){
-      $('input:checkbox').removeAttr('checked');
+      $('.checkable').css('background-color', 'white');
    });
+   $('.checkable').click(function(){
+      $('.checkable').css('background-color', 'green');
+   });
+)};
 </script>
 
 <h1>Checklijsten</h1>
@@ -28,40 +34,31 @@
    <table>
       <tbody>
          <tr>
-            <td class="check"><input type="checkbox"></td>
-            <td>Suction</td>
+            <td class="checkable">Suction</td>
          </tr>
          <tr>
-            <td class="check"><input type="checkbox"></td>
-            <td>Circulation (Bloed &amp; urinekatheter)</td>
+            <td class="checkable">Circulation (Bloed &amp; urinekatheter)</td>
          </tr>
          <tr>
-            <td class="check"><input type="checkbox"></td>
-            <td>Oxygen (Beademingsapparatuur)</td>
+            <td class="checkable">Oxygen (Beademingsapparatuur)</td>
          </tr>
          <tr>
-            <td class="check"><input type="checkbox"></td>
-            <td>Monitoring</td>
+            <td class="checkable">Monitoring</td>
          </tr>
          <tr>
-            <td class="check"><input type="checkbox"></td>
-            <td>Laryngoscope</td>
+            <td class="checkable">Laryngoscope</td>
          </tr>
          <tr>
-            <td class="check"><input type="checkbox"></td>
-            <td>Airway (Masker, mayo, ET &amp; LMA)</td>
+            <td class="checkable">Airway (Masker, mayo, ET &amp; LMA)</td>
          </tr>
          <tr>
-            <td class="check"><input type="checkbox"></td>
-            <td>Drugs</td>
+            <td class="checkable">Drugs</td>
          </tr>
          <tr>
-            <td class="check"><input type="checkbox"></td>
-            <td>Infusion</td>
+            <td class="checkable">Infusion</td>
          </tr>
          <tr>
-            <td class="check"><input type="checkbox"></td>
-            <td>Temperature</td>
+            <td class="checkable">Temperature</td>
          </tr>
       </tbody>
    </table>
