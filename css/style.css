@@ -91,8 +91,8 @@ body, html {
      border-bottom-left-radius: 10px;
      border-bottom-right-radius: 10px;
 }
- .check{
-     width: 25px;
+.checked{
+     background-color: #99ff99;
 }
  th{
      padding: 10px 15px;
@@ -123,6 +123,7 @@ body, html {
     padding-right: 10px;
     border-radius: 10px;
 }
+
 
 .crumb{
 	padding-top: 3px;
