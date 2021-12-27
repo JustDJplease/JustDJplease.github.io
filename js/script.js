@@ -78,6 +78,7 @@ $(document).ready(function() {
                   $('#breadcrumbs').css('display', 'flex');
                }
                });
+            makeCrumbsClickable();
          }
 
       } else {
@@ -115,12 +116,14 @@ $(document).ready(function() {
    });
 
    // --> Breadcrumbs-click.
-   $(".crumb").click(function() {
-      var goto = $(this).data("goto"); 
-      console.log(goto);
-      clearContent();
-      loadContent(goto);
-   });
+   function makeCrumbsClickable(){
+      $(".crumb").click(function() {
+       var goto = $(this).data("goto"); 
+       console.log(goto);
+       clearContent();
+       loadContent(goto);
+      });
+   }
 
    // ---------------------------------- //
    // Functionality for to-top-button.   //
