@@ -72,7 +72,12 @@ $(document).ready(function() {
 
          // Slide breadcrumbs into view.
          if ($('#breadcrumbs').not(':visible')) {
-            $('#breadcrumbs').slideDown();
+            $("#breadcrumbs").slideDown({
+               duration: 250,
+               start: function() {
+                  $('#breadcrumbs').css('display', 'flex');
+               }
+               });
          }
 
       } else {
