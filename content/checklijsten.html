@@ -12,10 +12,10 @@
 $(document).ready(function(){
    console.log("--> Loaded script in extra file.");
    $('#reset').click(function(){
-      $('.checkable').css('background-color', 'white');
+      $('.clickable').removeClass('clickable');
    });
    $('.checkable').click(function(){
-      $('.checkable').css('background-color', 'green');
+      $(this).addClass('clickable');
    });
 });
 </script>
