@@ -140,6 +140,21 @@ body {
     padding-top:3px;
 }
 
+.action {
+    display: flex;
+    background-color:#2b2d4182;
+    border-radius:10px;
+    color:#fff;
+    font-weight:500;
+    padding:3px 10px 3px;
+    margin-top:5px;
+}
+
+.action .material-icons{
+    font-size: 16px;
+    padding-right: 5px;
+}
+
 .highlight {
     background-color:#ef233c;
     border-radius:10px;
