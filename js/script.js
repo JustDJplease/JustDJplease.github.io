@@ -1,139 +1,106 @@
 $(document).ready(function() {
 
    // ---------------------------------- //
-   // Variables.                         //
+   // Local variable, current page.      //
    // ---------------------------------- //
-
    var currentlyViewing;
       
    // ---------------------------------- //
-   // Setting up AJAX.                   //
+   // Stop caching pages.                //
    // ---------------------------------- //
-
-   $.ajaxSetup({
-      cache: false
-   });
+   $.ajaxSetup({cache: false});
 
    // ---------------------------------- //
-   // Functionality for navigation menu. //
+   // GENERIC functions.                  //
+   // ---------------------------------- //
+
+   // --> Change CSS to display as a flex object.
+   function showAsFlexBox(object){
+        $(object).css('display', 'flex');
+   }
+
+   // --> Set HTML content.
+   function setContent(id, content){
+    document.getElementById(id).innerHTML = content;
+   }
+
+   // ---------------------------------- //
+   // CONTENT.                           //
+   // ---------------------------------- //
+
+   // --> Load new data into the content section.
+   function loadContent(id) {
+      setContent('content', "");
+      $("#content").load("content/" + id + ".html", function() { updateBreadCrumbs();});
+      currentlyViewing = id;
+   }
+
+   // ---------------------------------- //
+   // NAVIGATION menu.                   //
    // ---------------------------------- //
 
    // --> Pop menu in and out of view.
    function toggleMenu() {
       $("#navigation-menu").slideToggle({
          duration: 250,
-         start: function() {
-            $(this).css('display', 'flex');
-         }
+         start: function(){ showAsFlexBox(this) }
       });
    }
 
-   // --> Clear the content section.
-   function clearContent() {
-      document.getElementById("content").innerHTML = "";
-   }
-
-   // --> Load new data into the content section.
-   function loadContent(id) {
-      $("#content").hide().load("content/" + id + ".html").fadeIn('250');
-      currentlyViewing = id;
-      setTimeout(function(){updateBreadCrumbs();}, 250);
-   }
-
    // ---------------------------------- //
-   // Functionality for breadcrumbs.     //
+   // BREADCRUMBS                        //
    // ---------------------------------- //
 
    function updateBreadCrumbs() {
-      
-      var author = $("#settings").data("author");
-      var lastUpdate = $("#settings").data("lastUpdate");
       var breadcrumbs = $("#settings").data("breadcrumbs");
       var breadcrumbsListLinks = $("#settings").data("breadcrumbs-list-links");
       var breadcrumbsListTitles = $("#settings").data("breadcrumbs-list-titles");
       
-      console.log(author);
-      console.log(lastUpdate);
-      console.log(breadcrumbs);
-      console.log(breadcrumbsListLinks);
-      console.log(breadcrumbsListTitles);
-      
       if (breadcrumbs) {
-
-         // Adjust content of breadcrumbs.
          var crumbs = "";
          breadcrumbsListLinks.forEach(function(item, index) {
-            console.log(index, item);
             var goto = item;
             var title = breadcrumbsListTitles[index];
             crumbs = crumbs + "<span class=\"material-icons\">arrow_left</span><span class=\"crumb\" data-goto=\"" + goto + "\">&nbsp" + title + "</span>";
          });
-         document.getElementById("breadcrumbs").innerHTML = "" + crumbs;
+        setContent("breadcrumbs","" + crumbs);
 
-         // Slide breadcrumbs into view.
          if ($('#breadcrumbs').not(':visible')) {
-            $("#breadcrumbs").slideDown({
-               duration: 250,
-               start: function() {
-                  $('#breadcrumbs').css('display', 'flex');
-               }
-               });
+            $("#breadcrumbs").show({ start: function() { showAsFlexBox(this); }});
             makeCrumbsClickable();
          }
 
       } else {
-         // Hide breadcrumbs.
-         if ($('#breadcrumbs').is(':visible')) {
-            $('#breadcrumbs').slideUp();
-         }
+         if ($('#breadcrumbs').is(':visible')) { $('#breadcrumbs').hide(); }
       }
    }
 
    // ---------------------------------- //
-   // OnClick eventhandlers.             //
+   // CLICK events.                      //
    // ---------------------------------- //
 
    // --> Menu-icon-click.
-   $("#menu").click(function() {
-      toggleMenu();
-   });
+   $("#menu").click(function() { toggleMenu(); });
 
    // --> Logo-click.
-   $("#logo").click(function() {
-      if (currentlyViewing !== "main") {
-         clearContent();
-         loadContent("main");
-      }
-   });
+   $("#logo").click(function() { if (currentlyViewing !== "main") { loadContent("main"); }});
 
    // --> Menu-entry-click.
-   $("#navigation-menu").click(function() {
-      toggleMenu();
-      if (currentlyViewing !== event.target.id) {
-         clearContent();
-         loadContent(event.target.id);
-      }
-   });
+   $("#navigation-menu").click(function() { toggleMenu(); if (currentlyViewing !== event.target.id) { loadContent(event.target.id); }});
 
    // --> Breadcrumbs-click.
    function makeCrumbsClickable(){
       $(".crumb").click(function() {
        var goto = $(this).data("goto"); 
-       console.log(goto);
-       clearContent();
        loadContent(goto);
       });
    }
 
    // ---------------------------------- //
-   // Functionality for to-top-button.   //
+   // BACK-TO-TOP button.                //
    // ---------------------------------- //
 
-   $("#footer").click(function() {
-      $("html, body").animate({
-         scrollTop: "0"
-      }, 1000);
-   });
+   $("#footer").click(function() { $("html, body").animate({ scrollTop: "0" }, 1000); });
 
    $(window).scroll(function() {
       if ($(this).scrollTop() === 0) {
@@ -142,7 +109,7 @@ $(document).ready(function() {
          if ($('#footer').not(':visible')) {
             $('#footer').fadeIn();
             if ($('#footer').is(':visible')) {
-               $('#footer').css('display', 'flex');
+               showAsFlexBox('#footer');
             }
          }
       }
@@ -151,5 +118,6 @@ $(document).ready(function() {
    // ---------------------------------- //
    // Done scripting! Now show homepage. //
    // ---------------------------------- //
+
    loadContent("main");
 });
