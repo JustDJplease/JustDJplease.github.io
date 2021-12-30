@@ -145,7 +145,7 @@ body {
     border-radius:10px;
     color:#fff;
     font-weight:500;
-    padding:1px 20px 2px;
+    padding:1px 15px 2px;
 }
 
 .block {
@@ -168,8 +168,8 @@ body {
 }
 
 .tbl-small {
-    width:40px;
-    padding:1px;
+    width:50px;
+    padding:3px;
 }
 
 .tbl-medium {
@@ -204,7 +204,6 @@ body {
 }
 
 table {
-    table-layout:fixed;
     width:100%;
 }
 
