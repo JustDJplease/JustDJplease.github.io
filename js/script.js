@@ -127,7 +127,7 @@ $(document).ready(function() {
     $("#footer").click(function() {
         $("html, body").animate({
             scrollTop: "0"
-        }, 1000);
+        }, 500);
     });
 
     $(window).scroll(function() {
