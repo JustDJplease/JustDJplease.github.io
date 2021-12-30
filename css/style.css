@@ -112,6 +112,37 @@ body,html {
     color:#fff;
 }
 
+.tbl-small {
+    width:40px;
+    padding:1px;
+}
+
+.vertical {
+    transform:rotate(-90deg);
+    -webkit-transform:rotate(-90deg);
+}
+
+.centered {
+    text-align:center;
+}
+
+.medication {
+    list-style-type:none;
+    margin: 0;
+    padding: 0;
+}
+
+.medication a:link, .medication a:visited {
+    font-weight:500;
+    text-decoration:underline;
+    color:#000;
+}
+
+.lbl-warn {
+    font-weight:500;
+    color:#ef233c !important;
+}
+
 table {
     table-layout:fixed;
     width:100%;
