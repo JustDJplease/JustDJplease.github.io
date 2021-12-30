@@ -1,11 +1,54 @@
-body {
-    font-family:"Open Sans", sans-serif;
+@media (orientation: portrait) {
+    body,html {
+        background-color:#d90429;
+        height:100%;
+        margin:0;
+    }
+
+    #wrapper {
+        background-color:#fff;
+        min-height:100%;
+    }
 }
 
-body,html {
-    background-color:#d90429;
-    height:100%;
-    margin:0;
+@media (orientation: landscape) {
+    body,html {
+        background-color:#d90429;
+        height:100%;
+        margin:0;
+    }
+
+    #wrapper {
+        background-color:#fff;
+        min-height:100%;
+        padding-left:30px;
+        padding-right:30px;
+    }
+
+    #navigation {
+        width:calc(100% - 40px) !important;
+        margin-left:-30px !important;
+        padding-left:50px !important;
+        padding-right:50px !important;
+    }
+
+    #breadcrumbs {
+        width:calc(100% - 40px) !important;
+        margin-left:-30px !important;
+        padding-left:50px !important;
+        padding-right:50px !important;
+    }
+
+    #navigation-menu {
+        width:calc(100% - 40px) !important;
+        margin-left:-30px !important;
+        padding-left:50px !important;
+        padding-right:50px !important;
+    }
+}
+
+body {
+    font-family:"Open Sans", sans-serif;
 }
 
 #breadcrumbs {
@@ -66,11 +109,6 @@ body,html {
     font-weight:300;
     gap:10px;
     padding:20px;
-}
-
-#wrapper {
-    background-color:#fff;
-    min-height:100%;
 }
 
 .clickable {
