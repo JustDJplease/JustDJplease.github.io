@@ -98,10 +98,6 @@ body,html {
     padding:1px 20px 2px;
 }
 
-.navigation-menu-item:active {
-    background-color:#8d99ae;
-}
-
 .tbl-content {
     border:3px solid #2b2d42;
     border-bottom-left-radius:10px;
