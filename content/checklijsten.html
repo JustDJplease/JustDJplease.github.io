@@ -10,15 +10,22 @@
 
 <script>
 $(document).ready(function(){
-   console.log("--> Loaded script in extra file.");
-   $('#reset').click(function(){
-      $('.clickable').removeClass('clickable');
-   });
-   $('.checkable').click(function(){
-      $(this).addClass('clickable');
-   });
-});
 
+    $('.reset').click(function(){
+        var clearId = '#' + $(this).data('id');
+        console.log(clearId);
+        $(clearId).find('.clickable').removeClass('clickable', 100);
+    });
+
+    $('.checkable').click(function(){
+        if($(this).hasClass('clickable')){
+            $(this).removeClass('clickable', 100);
+        }else{
+            $(this).addClass('clickable', 100);
+        }
+    });
+
+});
 </script>
 
 <h1>Checklijsten</h1>
@@ -31,7 +38,7 @@ $(document).ready(function(){
         </thead>
     </table>
 </div>
-<div class="tbl-content">
+<div class="tbl-content" id="scomladit">
     <table>
         <tbody>
         <tr>
@@ -61,7 +68,111 @@ $(document).ready(function(){
         <tr>
             <td class="checkable">Temperature</td>
         </tr>
+        <tr>
+            <td class="checkableWithButton"><p class="reset" data-id="scomladit"><span class="highlight">Clear</span></p></td>
+        </tr>
         </tbody>
     </table>
 </div>
-<p id="reset"><span class="highlight">Clear</span></p>
+<br />
+<div class="tbl-header">
+    <table>
+        <thead>
+        <tr>
+            <th>Risicofactoren moeilijke kapbeademing (MOANS)</th>
+        </tr>
+        </thead>
+    </table>
+</div>
+<div class="tbl-content" id="moans">
+    <table>
+        <tbody>
+        <tr>
+            <td class="checkable">Mask seal: facial hair, body fluids or traumatic deformity</td>
+        </tr>
+        <tr>
+            <td class="checkable">Obesity, OSAS</td>
+        </tr>
+        <tr>
+            <td class="checkable">Age > 55 years</td>
+        </tr>
+        <tr>
+            <td class="checkable">No teeth</td>
+        </tr>
+        <tr>
+            <td class="checkable">Stiff lungs: asthma, COPD</td>
+        </tr>
+        <tr>
+            <td class="checkableWithButton"><p class="reset" data-id="moans"><span class="highlight">Clear</span></p></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<br />
+<div class="tbl-header">
+    <table>
+        <thead>
+        <tr>
+            <th>Risicofactoren moeilijke luchtweg (LEMON)</th>
+        </tr>
+        </thead>
+    </table>
+</div>
+<div class="tbl-content" id="lemon">
+    <table>
+        <tbody>
+        <tr>
+            <td class="checkable">Look: obesity, head & neck surgery, irradiation, traumatic deformity, facial hair, poor dentition, dentures and short & thick neck</td>
+        </tr>
+        <tr>
+            <td class="checkable">Evaluate: 3-3-2 fingers-rule (mouth size, hyoid-mental distance, thyroid-mouth distance</td>
+        </tr>
+        <tr>
+            <td class="checkable">Mallampati</td>
+        </tr>
+        <tr>
+            <td class="checkable">Obstruction: stridor, voice changes, drooling, dyspnea</td>
+        </tr>
+        <tr>
+            <td class="checkable">Neck mobility: Degenerative & rheumatoid disease, cervical collar</td>
+        </tr>
+        <tr>
+            <td class="checkableWithButton"><p class="reset" data-id="lemon"><span class="highlight">Clear</span></p></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<br />
+<div class="tbl-header">
+    <table>
+        <thead>
+        <tr>
+            <th>Risicofactoren PONV</th>
+        </tr>
+        </thead>
+    </table>
+</div>
+<div class="tbl-content" id="ponv">
+    <table>
+        <tbody>
+        <tr>
+            <td class="checkable">Vrouwelijk geslacht</td>
+        </tr>
+        <tr>
+            <td class="checkable">Eerdere PONV of wagenziekte</td>
+        </tr>
+        <tr>
+            <td class="checkable">Niet-roker</td>
+        </tr>
+        <tr>
+            <td class="checkable">Postoperatief opiatengebruik</td>
+        </tr>
+        <tr>
+            <td class="checkable">Operatieduur > 60 min</td>
+        </tr>
+        <tr>
+            <td class="checkableWithButton"><p class="reset" data-id="ponv"><span class="highlight">Clear</span></p></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
