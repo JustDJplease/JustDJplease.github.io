@@ -73,6 +73,7 @@ $(document).ready(function() {
 
             if ($('#breadcrumbs').not(':visible')) {
                 $("#breadcrumbs").show({
+                    duration: 50,
                     start: function() {
                         showAsFlexBox(this);
                     }
