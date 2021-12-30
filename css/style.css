@@ -16,6 +16,7 @@
         background-color:#d90429;
         height:100%;
         margin:0;
+        font-size:12px;
     }
 
     #wrapper {
@@ -45,10 +46,21 @@
         padding-left:50px !important;
         padding-right:50px !important;
     }
+
+    h1 {
+        font-size:18px;
+        font-weight:300;
+    }
+
+    h2 {
+        font-size:16px;
+        font-weight:300;
+    }
 }
 
 body {
     font-family:"Open Sans", sans-serif;
+    font-size:12px;
 }
 
 #breadcrumbs {
