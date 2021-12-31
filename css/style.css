@@ -63,6 +63,12 @@ body {
     font-size:12px;
 }
 
+.placeholder{
+    display:none;
+    margin:0px;
+    padding:0px;
+}
+
 #breadcrumbs {
     background-color:#edf2f4;
     color:#000;

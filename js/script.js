@@ -35,6 +35,7 @@ $(document).ready(function() {
         setContent('content', "");
         $("#content").load("content/" + id + ".html", function() {
             updateBreadCrumbs();
+            replacePlaceholders();
         });
         currentlyViewing = id;
     }
