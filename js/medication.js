@@ -52,26 +52,31 @@ function replace(object, simple){
 // (2) - Hyperlink - String
 // (3) - isAntagonist - Boolean.
 
-var tramadol = ["tramadol", [], "t/tramadol", false];
-var morfine = ["morfine", ["Oramorph", "Sendelor"], "m/morfine", false];
-var oxycodon = ["oxycodon", ["OxyNorm", "OxyContin (mga)"], "o/oxycodon", false];
+// Analgetic
 var buprenorfine = ["buprenorfine", ["BuTrans (derm)", "Temgesic (tbl)"], "b/buprenorfine", false];
 var fentanyl = ["fentanyl", ["Instanyl (neus)", "Abstral (tbl)", "Actiq (tbl)", "Durogesic (derm)"], "f/fentanyl__parenteraal_", false];
 var fentanylDerm = ["fentanyl (derm)", ["Durogesic (derm)"], "f/fentanyl__transdermaal_", false];
-var sufentanil = ["sufentanil", ["Sufenta"], "s/sufentanil", false];
+var morfine = ["morfine", ["Oramorph", "Sendelor"], "m/morfine", false];
 var naloxon = ["naloxon", [], "n/naloxon", true];
+var oxycodon = ["oxycodon", ["OxyNorm", "OxyContin (mga)"], "o/oxycodon", false];
+var sufentanil = ["sufentanil", ["Sufenta"], "s/sufentanil", false];
+var tramadol = ["tramadol", [], "t/tramadol", false];
+
+// Hypnotic
+var esketamine = ["esketamine", ["Ketanest-S"], "e/esketamine__intraveneus_", false];
+var etomidaat = ["etomidaat", ["Hypnomidate"], "e/etomidaat", false];
+var midazolam = ["midazolam", ["Dormicum"], "m/midazolam", false];
 var propofol = ["propofol", ["Diprivan"], "p/propofol", false];
 var thiopental = ["thiopental", [], "t/thiopental", false];
-var etomidaat = ["etomidaat", ["Hypnomidate"], "e/etomidaat", false];
-var esketamine = ["esketamine", ["Ketanest-S"], "e/esketamine__intraveneus_", false];
-var midazolam = ["midazolam", ["Dormicum"], "m/midazolam", false];
+
+// Vasoactive
 var adrenaline = ["adrenaline", [], "a/adrenaline", false];
-var noradrenaline = ["noradrenaline", [], "n/noradrenaline", false];
-var fenylefrine = ["fenylefrine", [], "f/fenylefrine__injectie_", false];
-var efedrine = ["efedrine", [], "e/efedrine", false];
-var dopamineLaag = ["dopamine", ["_Lage dosering"], "d/dopamine", false];
-var dopamineHoog = ["dopamine", ["_Hoge dosering"], "d/dopamine", false];
-var dobutamine = ["dobutamine", [], "d/dobutamine", false];
-var milrinon = ["milrinon", [], "m/milrinon", false];
 var desmopressone = ["desmopressine", ["_Vasopressine"], "d/desmopressine", false];
+var dobutamine = ["dobutamine", [], "d/dobutamine", false];
+var dopamineHoog = ["dopamine", ["_Hoge dosering"], "d/dopamine", false];
+var dopamineLaag = ["dopamine", ["_Lage dosering"], "d/dopamine", false];
+var efedrine = ["efedrine", [], "e/efedrine", false];
+var fenylefrine = ["fenylefrine", [], "f/fenylefrine__injectie_", false];
 var isoprenaline = ["isoprenaline", [], "i/isoprenaline", false];
+var milrinon = ["milrinon", [], "m/milrinon", false];
+var noradrenaline = ["noradrenaline", [], "n/noradrenaline", false];
