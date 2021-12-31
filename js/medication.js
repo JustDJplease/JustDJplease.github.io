@@ -33,7 +33,13 @@ function replace(object, simple){
             output = "<ul class=\"medication\"><li><a href=\"https://www.farmacotherapeutischkompas.nl/bladeren/preparaatteksten/" + _medLink + "\">" + _medName + "</a></li>";
         }
         if(!simple){
-            _medRegs.forEach(_reg => output = output + "<li>&reg; "+ _reg+"</li>");
+            _medRegs.forEach(_reg => {
+                if(_reg.startsWith("_")){
+                    output = output + "<li>"+ _reg+"</li>";
+                }else{
+                    output = output + "<li>&reg; "+ _reg+"</li>";
+                }
+            });
         }
         output = output + "</ul>";
     }
@@ -59,3 +65,13 @@ var thiopental = ["thiopental", [], "t/thiopental", false];
 var etomidaat = ["etomidaat", ["Hypnomidate"], "e/etomidaat", false];
 var esketamine = ["esketamine", ["Ketanest-S"], "e/esketamine__intraveneus_", false];
 var midazolam = ["midazolam", ["Dormicum"], "m/midazolam", false];
+var adrenaline = ["adrenaline", [], "a/adrenaline", false];
+var noradrenaline = ["noradrenaline", [], "n/noradrenaline", false];
+var fenylefrine = ["fenylefrine", [], "f/fenylefrine__injectie_", false];
+var efedrine = ["efedrine", [], "e/efedrine", false];
+var dopamineLaag = ["dopamine", ["_Lage dosering"], "d/dopamine", false];
+var dopamineHoog = ["dopamine", ["_Hoge dosering"], "d/dopamine", false];
+var dobutamine = ["dobutamine", [], "d/dobutamine", false];
+var milrinon = ["milrinon", [], "m/milrinon", false];
+var desmopressone = ["desmopressine", ["_Vasopressine"], "d/desmopressine", false];
+var isoprenaline = ["isoprenaline", [], "i/isoprenaline", false];
