@@ -35,9 +35,9 @@ function replace(object, simple){
         if(!simple){
             _medRegs.forEach(_reg => {
                 if(_reg.startsWith("_")){
-                    output = output + "<li>"+ _reg+"</li>";
+                    output = output + "<li>" + _reg.substring(1); + "</li>";
                 }else{
-                    output = output + "<li>&reg; "+ _reg+"</li>";
+                    output = output + "<li>&reg; " + _reg+ "</li>";
                 }
             });
         }
@@ -71,7 +71,7 @@ var thiopental = ["thiopental", [], "t/thiopental", false];
 
 // Vasoactive
 var adrenaline = ["adrenaline", [], "a/adrenaline", false];
-var desmopressone = ["desmopressine", ["_Vasopressine"], "d/desmopressine", false];
+var desmopressine = ["desmopressine", ["_Vasopressine"], "d/desmopressine", false];
 var dobutamine = ["dobutamine", [], "d/dobutamine", false];
 var dopamineHoog = ["dopamine", ["_Hoge dosering"], "d/dopamine", false];
 var dopamineLaag = ["dopamine", ["_Lage dosering"], "d/dopamine", false];
