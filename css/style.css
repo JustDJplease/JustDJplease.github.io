@@ -71,7 +71,7 @@ body {
 
 #breadcrumbs {
     background-color:#edf2f4;
-    color:#000;
+    color:#2b2d42;
     display:none;
     font-size:14px;
     font-weight:300;
@@ -127,6 +127,22 @@ body {
     font-weight:300;
     gap:10px;
     padding:20px;
+}
+
+#menu-chevron {
+    font-size: 18px;
+    color: #2b2d42;
+    vertical-align: middle;
+}
+
+.navigation-menu-collapsed {
+    padding-left: 15px;
+    display: none;
+    flex-direction: column;
+    margin-left: 15px;
+    gap: 10px;
+    font-size: 18px;
+    border-left: 1px dashed #2b2d42;
 }
 
 .clickable {

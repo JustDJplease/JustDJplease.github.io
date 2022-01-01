@@ -107,9 +107,26 @@ $(document).ready(function() {
 
     // --> Menu-entry-click.
     $("#navigation-menu").click(function() {
-        toggleMenu();
-        if (currentlyViewing !== event.target.id) {
-            loadContent(event.target.id);
+        if(event.target.id === "navigation-menu" || event.target.id === ""){
+            // do nothing, prevents buggy behaviour;
+        }else if (event.target.id === "medicatie" || event.target.id === "menu-chevron"){
+              if ($('.navigation-menu-collapsed').not(':visible')) {
+                    $('#menu-chevron').html("expand_less");
+              }
+              if ($('.navigation-menu-collapsed').is(':visible')) {
+                    $('#menu-chevron').html("expand_more");
+              }
+              $(".navigation-menu-collapsed").slideToggle({
+                   duration: 250,
+                   start: function() {
+                      showAsFlexBox(this)
+                   }
+              });
+        } else {
+            toggleMenu();
+            if (currentlyViewing !== event.target.id) {
+                loadContent(event.target.id);
+            }
         }
     });
 
