@@ -245,6 +245,7 @@
 }
  .modal {
     display: none;
+    flex-direction: column;
     position: fixed;
     z-index: 1;
     padding-top: 100px;
@@ -252,7 +253,7 @@
     padding-right: 20px;
     left: 0;
     top: 0;
-    width: calc(100%-20px);
+    width: calc(100% - 40px);
     height: 100%;
     overflow: auto;
     background-color: rgb(0,0,0);
@@ -261,24 +262,15 @@
  .modal img {
     background-color: #fff;
     border-radius: 10px;
+    max-height: calc(100% - 120px);
 }
  .modal-close {
     position: absolute;
-    top: 15px;
+    top: 30px;
     right: 35px;
     color: #fff;
     font-size: 40px;
     font-weight: bold;
-}
- .modal-caption {
-    margin: auto;
-    display: block;
-    width: 100%;
-    text-align: center;
-    color: #000;
-    background-color: #fff;
-    border-radius: 10px;
-    padding: 10px 0;
 }
 
 /* Generic CSS objects */

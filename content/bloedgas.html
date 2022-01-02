@@ -19,7 +19,12 @@ $(document).ready(function(){
 
     $('img').click(function(){
         var modalId = '#' + $(this).data('modal-id');
-        $(modalId).fadeIn();
+        $(modalId).fadeIn({
+            duration: 250,
+            start: function() {
+                $(this).css('display', 'flex')
+            }
+        });
     });
 
      $('.modal-close').click(function(){
@@ -73,7 +78,6 @@ $(document).ready(function(){
                     <div id="modalABD" class="modal">
                         <span class="modal-close">&times;</span>
                         <img src="img/content/acid-base-diagram.svg"/>
-                        <span class="modal-caption">Acid-base diagram &copy; Wikipedia.</span>
                     </div>
                 </ul>
             </td>
