@@ -28,9 +28,9 @@ function replace(object, simple){
         var _medAnti = medObject[3];
 
         if(_medAnti){
-            output = "<ul class=\"medication\"><li><a class=\"lbl-warn\" href=\"https://www.farmacotherapeutischkompas.nl/bladeren/preparaatteksten/" + _medLink + "\">" + _medName + "</a></li>";
+            output = "<ul class=\"tbl-list\"><li><a class=\"text-red\" href=\"https://www.farmacotherapeutischkompas.nl/bladeren/preparaatteksten/" + _medLink + "\">" + _medName + "</a></li>";
         }else{
-            output = "<ul class=\"medication\"><li><a href=\"https://www.farmacotherapeutischkompas.nl/bladeren/preparaatteksten/" + _medLink + "\">" + _medName + "</a></li>";
+            output = "<ul class=\"tbl-list\"><li><a href=\"https://www.farmacotherapeutischkompas.nl/bladeren/preparaatteksten/" + _medLink + "\">" + _medName + "</a></li>";
         }
         if(!simple){
             _medRegs.forEach(_reg => {

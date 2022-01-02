@@ -19,14 +19,14 @@ $(document).ready(function(){
 
     $('.reset').click(function(){
         var clearId = '#' + $(this).data('id');
-        $(clearId).find('.clickable').removeClass('clickable', 100);
+        $(clearId).find('.checklist-item-selected').removeClass('checklist-item-selected', 100);
     });
 
-    $('.checkable').click(function(){
-        if($(this).hasClass('clickable')){
-            $(this).removeClass('clickable', 100);
+    $('.checklist-item').click(function(){
+        if($(this).hasClass('checklist-item-selected')){
+            $(this).removeClass('checklist-item-selected', 100);
         }else{
-            $(this).addClass('clickable', 100);
+            $(this).addClass('checklist-item-selected', 100);
         }
     });
 
@@ -47,34 +47,34 @@ $(document).ready(function(){
     <table>
         <tbody>
         <tr>
-            <td class="checkable">Suction</td>
+            <td class="checklist-item">Suction</td>
         </tr>
         <tr>
-            <td class="checkable">Circulation (Bloed &amp; urinekatheter)</td>
+            <td class="checklist-item">Circulation (Bloed &amp; urinekatheter)</td>
         </tr>
         <tr>
-            <td class="checkable">Oxygen (Beademingsapparatuur)</td>
+            <td class="checklist-item">Oxygen (Beademingsapparatuur)</td>
         </tr>
         <tr>
-            <td class="checkable">Monitoring</td>
+            <td class="checklist-item">Monitoring</td>
         </tr>
         <tr>
-            <td class="checkable">Laryngoscope</td>
+            <td class="checklist-item">Laryngoscope</td>
         </tr>
         <tr>
-            <td class="checkable">Airway (Masker, mayo, ET &amp; LMA)</td>
+            <td class="checklist-item">Airway (Masker, mayo, ET &amp; LMA)</td>
         </tr>
         <tr>
-            <td class="checkable">Drugs</td>
+            <td class="checklist-item">Drugs</td>
         </tr>
         <tr>
-            <td class="checkable">Infusion</td>
+            <td class="checklist-item">Infusion</td>
         </tr>
         <tr>
-            <td class="checkable">Temperature</td>
+            <td class="checklist-item">Temperature</td>
         </tr>
         <tr>
-            <td class="checkableWithButton"><p class="reset" data-id="scomladit"><span class="highlight">Clear</span>
+            <td class="checklist-button"><p class="reset" data-id="scomladit"><span class="text-box-red">Clear</span>
             </p></td>
         </tr>
         </tbody>
@@ -94,22 +94,22 @@ $(document).ready(function(){
     <table>
         <tbody>
         <tr>
-            <td class="checkable">Mask seal: facial hair, body fluids or traumatic deformity</td>
+            <td class="checklist-item">Mask seal: facial hair, body fluids or traumatic deformity</td>
         </tr>
         <tr>
-            <td class="checkable">Obesity, OSAS</td>
+            <td class="checklist-item">Obesity, OSAS</td>
         </tr>
         <tr>
-            <td class="checkable">Age > 55 years</td>
+            <td class="checklist-item">Age > 55 years</td>
         </tr>
         <tr>
-            <td class="checkable">No teeth</td>
+            <td class="checklist-item">No teeth</td>
         </tr>
         <tr>
-            <td class="checkable">Stiff lungs: asthma, COPD</td>
+            <td class="checklist-item">Stiff lungs: asthma, COPD</td>
         </tr>
         <tr>
-            <td class="checkableWithButton"><p class="reset" data-id="moans"><span class="highlight">Clear</span></p>
+            <td class="checklist-button"><p class="reset" data-id="moans"><span class="text-box-red">Clear</span></p>
             </td>
         </tr>
         </tbody>
@@ -129,26 +129,26 @@ $(document).ready(function(){
     <table>
         <tbody>
         <tr>
-            <td class="checkable">Look: obesity, head & neck surgery, irradiation, traumatic deformity, facial hair,
+            <td class="checklist-item">Look: obesity, head & neck surgery, irradiation, traumatic deformity, facial hair,
                 poor dentition, dentures and short & thick neck
             </td>
         </tr>
         <tr>
-            <td class="checkable">Evaluate: 3-3-2 fingers-rule (mouth size, hyoid-mental distance, thyroid-mouth
+            <td class="checklist-item">Evaluate: 3-3-2 fingers-rule (mouth size, hyoid-mental distance, thyroid-mouth
                 distance
             </td>
         </tr>
         <tr>
-            <td class="checkable">Mallampati</td>
+            <td class="checklist-item">Mallampati</td>
         </tr>
         <tr>
-            <td class="checkable">Obstruction: stridor, voice changes, drooling, dyspnea</td>
+            <td class="checklist-item">Obstruction: stridor, voice changes, drooling, dyspnea</td>
         </tr>
         <tr>
-            <td class="checkable">Neck mobility: Degenerative & rheumatoid disease, cervical collar</td>
+            <td class="checklist-item">Neck mobility: Degenerative & rheumatoid disease, cervical collar</td>
         </tr>
         <tr>
-            <td class="checkableWithButton"><p class="reset" data-id="lemon"><span class="highlight">Clear</span></p>
+            <td class="checklist-button"><p class="reset" data-id="lemon"><span class="text-box-red">Clear</span></p>
             </td>
         </tr>
         </tbody>
@@ -168,22 +168,22 @@ $(document).ready(function(){
     <table>
         <tbody>
         <tr>
-            <td class="checkable">Vrouwelijk geslacht</td>
+            <td class="checklist-item">Vrouwelijk geslacht</td>
         </tr>
         <tr>
-            <td class="checkable">Eerdere PONV of wagenziekte</td>
+            <td class="checklist-item">Eerdere PONV of wagenziekte</td>
         </tr>
         <tr>
-            <td class="checkable">Niet-roker</td>
+            <td class="checklist-item">Niet-roker</td>
         </tr>
         <tr>
-            <td class="checkable">Postoperatief opiatengebruik</td>
+            <td class="checklist-item">Postoperatief opiatengebruik</td>
         </tr>
         <tr>
-            <td class="checkable">Operatieduur > 60 min</td>
+            <td class="checklist-item">Operatieduur > 60 min</td>
         </tr>
         <tr>
-            <td class="checkableWithButton"><p class="reset" data-id="ponv"><span class="highlight">Clear</span></p>
+            <td class="checklist-button"><p class="reset" data-id="ponv"><span class="text-box-red">Clear</span></p>
             </td>
         </tr>
         </tbody>

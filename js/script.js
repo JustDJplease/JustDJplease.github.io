@@ -46,7 +46,7 @@ $(document).ready(function() {
 
     // --> Pop menu in and out of view.
     function toggleMenu() {
-        $("#navigation-menu").slideToggle({
+        $("#nav").slideToggle({
             duration: 250,
             start: function() {
                 showAsFlexBox(this)
@@ -68,7 +68,7 @@ $(document).ready(function() {
             breadcrumbsListLinks.forEach(function(item, index) {
                 var goto = item;
                 var title = breadcrumbsListTitles[index];
-                crumbs = crumbs + "<span class=\"material-icons\">arrow_left</span><span class=\"crumb\" data-goto=\"" + goto + "\">&nbsp" + title + "</span>";
+                crumbs = crumbs + "<span class=\"material-icons\">arrow_left</span><span class=\"breadcrumbs-item\" data-goto=\"" + goto + "\">&nbsp" + title + "</span>";
             });
             setContent("breadcrumbs", "" + crumbs);
 
@@ -94,29 +94,29 @@ $(document).ready(function() {
     // ---------------------------------- //
 
     // --> Menu-icon-click.
-    $("#menu").click(function() {
+    $("#header-dropdown").click(function() {
         toggleMenu();
     });
 
     // --> Logo-click.
-    $("#logo").click(function() {
+    $("#header-logo").click(function() {
         if (currentlyViewing !== "main") {
             loadContent("main");
         }
     });
 
     // --> Menu-entry-click.
-    $("#navigation-menu").click(function() {
-        if(event.target.id === "navigation-menu" || event.target.id === ""){
+    $("#nav").click(function() {
+        if(event.target.id === "nav" || event.target.id === ""){
             // do nothing, prevents buggy behaviour;
-        }else if (event.target.id === "medicatie" || event.target.id === "menu-chevron"){
-              if ($('.navigation-menu-collapsed').not(':visible')) {
-                    $('#menu-chevron').html("expand_less");
+        }else if (event.target.id === "medicatie" || event.target.id === "nav-chevron"){
+              if ($('.nav-section-collapsed').not(':visible')) {
+                    $('#nav-chevron').html("expand_less");
               }
-              if ($('.navigation-menu-collapsed').is(':visible')) {
-                    $('#menu-chevron').html("expand_more");
+              if ($('.nav-section-collapsed').is(':visible')) {
+                    $('#nav-chevron').html("expand_more");
               }
-              $(".navigation-menu-collapsed").slideToggle({
+              $(".nav-section-collapsed").slideToggle({
                    duration: 250,
                    start: function() {
                       showAsFlexBox(this)
@@ -132,7 +132,7 @@ $(document).ready(function() {
 
     // --> Breadcrumbs-click.
     function makeCrumbsClickable() {
-        $(".crumb").click(function() {
+        $(".breadcrumbs-item").click(function() {
             var goto = $(this).data("goto");
             loadContent(goto);
         });

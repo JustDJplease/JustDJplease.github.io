@@ -17,8 +17,7 @@
 <meta name="apple-mobile-web-app-title" content="Anesthesie">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="viewport"
-      content="viewport-fit=cover, user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="viewport" content="viewport-fit=cover, user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
 
 <!-- Web-app icon -->
 <link rel="apple-touch-icon" href="img/icon.png">
@@ -27,6 +26,8 @@
 <!-- webapp import resources -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+<!-- style & fonts -->
 <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,500,500i,700,700i">
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
@@ -39,29 +40,25 @@
 <!-- html -->
 <body>
 <div id="wrapper">
-    <div id="navigation">
-        <div id="logo">Anesthesie</div>
-        <div id="menu"><span class="material-icons">toc</span></div>
+    <div id="header">
+        <div id="header-logo">Anesthesie</div>
+        <div id="header-dropdown"><span class="material-icons">toc</span></div>
     </div>
     <div id="breadcrumbs"></div>
-    <div id="navigation-menu">
-        <div class="navigation-menu-item" id="medicatie">
-            Medicatiekennis <span id="menu-chevron" class="material-icons">keyboard_arrow_down</span>
+    <div id="nav">
+        <div class="nav-item" id="medicatie">Medicatiekennis <span id="nav-chevron" class="material-icons">keyboard_arrow_down</span></div>
+        <div class="nav-section-collapsed">
+            <div class="nav-item" id="hypnotica">Hypnotica</div>
+            <div class="nav-item" id="analgetica">Analgetica</div>
+            <div class="nav-item" id="relaxantia">Relaxantia</div>
+            <div class="nav-item" id="vasoactiva">Vasoactiva</div>
+            <div class="nav-item" id="lokaleAnesthetica">Lokale anesthetica</div>
         </div>
-        <div class="navigation-menu-collapsed">
-            <div class="navigation-menu-item" id="hypnotica">Hypnotica</div>
-            <div class="navigation-menu-item" id="analgetica">Analgetica</div>
-            <div class="navigation-menu-item" id="relaxantia">Relaxantia</div>
-            <div class="navigation-menu-item" id="vasoactiva">Vasoactiva</div>
-            <div class="navigation-menu-item" id="lokaleAnesthetica">Lokale anesthetica</div>
-        </div>
-        <div class="navigation-menu-item" id="bloedgas">Bloedgas</div>
-        <div class="navigation-menu-item" id="maatEnGetal">Maat & getal</div>
-        <div class="navigation-menu-item" id="checklijsten">Checklijsten</div>
+        <div class="nav-item" id="bloedgas">Bloedgas</div>
+        <div class="nav-item" id="maatEnGetal">Maat & getal</div>
+        <div class="nav-item" id="checklijsten">Checklijsten</div>
     </div>
-    <div id="content">
-        <!-- Content is generated here -->
-    </div>
+    <div id="content"><!-- Content is generated here --></div>
     <div id="footer"><span class="material-icons">arrow_upward</span></div>
 </div>
 </body>
