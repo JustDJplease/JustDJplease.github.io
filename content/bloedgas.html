@@ -46,8 +46,11 @@ $(document).ready(function(){
                 <ul class="tbl-list">
                     <li class="text-box-red">Normaalwaarden</li>
                     <li class="text-box-gray">pH: 7.35 - 7.45</li>
-                    <li class="text-box-gray">pCO<sub>2</sub>: 35 - 45 mmHg</li>
-                    <li class="text-box-gray">HCO<sub>3</sub>: 24-32 mEq/L</li>
+                    <li class="text-box-gray asBaseline">pCO<sub>2</sub>: 35 - 45 mmHg</li>
+                    <li class="text-box-gray asBaseline">HCO<sub>3</sub>: 24 - 32 mEq/L</li>
+                    <li class="text-box-gray">Lactaat: 1 - 2 mmol/L</li>
+                    <li class="text-box-gray">Aniongap: 8 - 16 mmol/L</li>
+                    <li class="text-box-gray">Aa-gradiënt: < 2.5 + (0.25 &times; lft) mmHg</li>
                 </ul>
             </td>
         </tr>
@@ -72,6 +75,62 @@ $(document).ready(function(){
                         <img src="img/content/acid-base-diagram.svg" />
                         <span class="modal-caption">Acid-base diagram &copy; Wikipedia.</span>
                     </div>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td class="tbl-small tbl-centered"><span class="text-box-red asBlock">3</span></td>
+            <td>
+                <ul class="tbl-list">
+                    <li><b>Bereken verwachte compensatie (mmHg)</b></li>
+                    <li>Niet volledig = gecombineerde stoornis</li>
+                    <li>&nbsp</li>
+                    <li>Bij met. acidose: CO<sub>2</sub> = 1,5 &times; HCO<sub>3</sub> + 8 ± 2</li>
+                    <li>Bij met. alkalose: CO<sub>2</sub> = 0,7 &times; HCO<sub>3</sub> + 20 ± 5</li>
+                    <li>&nbsp</li>
+                    <li>Bij respiratoire stoornis: 1-2-4-5 regel:</li>
+                    <li><i>Per 10 mmHg verandering pCO<sub>2</sub></i></li>
+                    <li><i>de volgende verandering in HCO<sub>3</sub></i></li>
+                    <li><i>- Acute acidose 1&uarr;</i></li>
+                    <li><i>- Acute alkalose 2&darr;</i></li>
+                    <li><i>- Chronische acidose 4&uarr;</i></li>
+                    <li><i>- Chronische alkalose 5&darr;</i></li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td class="tbl-small tbl-centered"><span class="text-box-red asBlock">4</span></td>
+            <td>
+                <ul class="tbl-list">
+                    <li><b>Bereken aniongap (bij met. acidose)</b></li>
+                    <li class="text-box-gray asBaseline">Aniongap = Na – Cl – HCO<sub>3</sub></li>
+                    <li><i>Bij laag albumine: 2.5 punt stijging aniongap</i></li>
+                    <li><i>per 10 g/L daling albumine <40 g/L</i></li>
+                    <li><i>Lactaat vult het vaakst de aniongap.</i></li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td class="tbl-small tbl-centered"><span class="text-box-red asBlock">4</span></td>
+            <td>
+                <ul class="tbl-list">
+                    <li><b>Bereken deltagap (bij hoge aniongap)</b></li>
+                    <li class="text-box-gray asBaseline">Deltagap = (aniongap - 12) / (24 - HCO<sub>3</sub>)</li>
+                    <li><i>&delta; < 0,4: non-AG-acidose.</i></li>
+                    <li><i>&delta; 0,4 - 0,8: zowel AG als non-AG-acidose.</i></li>
+                    <li><i>&delta; 0,8 - 2,0: high AG-acidose.</i></li>
+                    <li><i>&delta; > 2.0: ook met. alkalose of resp. acidose.</i></li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td class="tbl-small tbl-centered"><span class="text-box-red asBlock">5</span></td>
+            <td>
+                <ul class="tbl-list">
+                    <li><b>Bereken Aa-gradiënt (by hypoxemie)</b></li>
+                    <li class="text-box-gray asBaseline">Aa-gradiënt = pAO<sub>2</sub> - paO<sub>2</sub></li>
+                    <li class="text-box-gray asBaseline">pAO<sub>2</sub> = (713 &times; FIO<sub>2</sub>) - (pCO<sub>2</sub> &times; 1.25)</li>
+                    <li><i>Bij 21% FIO<sub>2</sub>, eerste deel formule = 150.</i></li>
                 </ul>
             </td>
         </tr>
