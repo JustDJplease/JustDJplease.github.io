@@ -14,6 +14,21 @@
         hidden>
 </article>
 
+<script>
+$(document).ready(function(){
+
+    $('img').click(function(){
+        var modalId = '#' + $(this).data('modal-id');
+        $(modalId).fadeIn();
+    });
+
+     $('.modal-close').click(function(){
+        $('.modal').fadeOut();
+    });
+
+});
+</script>
+
 <div class="tbl-header">
     <table>
         <thead>
@@ -51,7 +66,12 @@
             <td>
                 <ul class="tbl-list">
                     <li><b>Bepaal primaire stoornis</b></li>
-                    <li><img src="img/content/acid-base-diagram.svg" /></li>
+                    <li><img src="img/content/acid-base-diagram.svg" data-modal-id="modalABD"/></li>
+                    <div id="modalABD" class="modal">
+                        <span class="modal-close">&times;</span>
+                        <img src="img/content/acid-base-diagram.svg" />
+                        <span class="modal-caption">Acid-base diagram &copy; Wikipedia.</span>
+                    </div>
                 </ul>
             </td>
         </tr>

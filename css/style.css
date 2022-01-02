@@ -174,7 +174,7 @@
      border-radius:10px;
      color:#fff;
      font-weight:500;
-     padding:1px 15px 2px;
+     padding:3px 10px 3px;
 }
  .text-red {
      font-weight:500;
@@ -238,12 +238,51 @@
      color:#000;
 }
 
+/* Image section */
+ img {
+     max-width: 100%;
+     height: auto;
+}
+ .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    padding-left: 20px;
+    padding-right: 20px;
+    left: 0;
+    top: 0;
+    width: calc(100%-20px);
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.9);
+}
+ .modal img {
+    background-color: #fff;
+    border-radius: 10px;
+}
+ .modal-close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+}
+ .modal-caption {
+    margin: auto;
+    display: block;
+    width: 100%;
+    text-align: center;
+    color: #000;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 10px 0;
+}
+
 /* Generic CSS objects */
  .asBlock {
      display:block;
      margin: 0px 2px;
-}
- img {
-     max-width: 100%;
-     height: auto;
 }
