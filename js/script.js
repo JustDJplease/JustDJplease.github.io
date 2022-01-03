@@ -107,27 +107,31 @@ $(document).ready(function() {
 
     // --> Menu-entry-click.
     $("#nav").click(function() {
-        if(event.target.id === "nav" || event.target.id === ""){
+        if(event.target.id === "nav" || event.target.id === "" || event.target.id === "fysiologie" || event.target.id === "medicatie"){
             // do nothing, prevents buggy behaviour;
-        }else if (event.target.id === "medicatie" || event.target.id === "nav-chevron"){
-              if ($('.nav-section-collapsed').not(':visible')) {
-                    $('#nav-chevron').html("expand_less");
-              }
-              if ($('.nav-section-collapsed').is(':visible')) {
-                    $('#nav-chevron').html("expand_more");
-              }
-              $(".nav-section-collapsed").slideToggle({
-                   duration: 250,
-                   start: function() {
+        }else{
+            var data = $('#' + event.target.id).data("expand-id");
+            if(data === undefined){
+               toggleMenu();
+              if (currentlyViewing !== event.target.id) {
+                   loadContent(event.target.id);
+               }
+             }else{
+              if ($('#' + data).not(':visible')) {
+                  $('#chevron-' + data).html("expand_less");
+               }
+               if ($('#' + data).is(':visible')) {
+                    $('#chevron-' + data).html("expand_more");
+               }
+
+              $('#' + data).slideToggle({
+                  duration: 250,
+                  start: function() {
                       showAsFlexBox(this)
-                   }
+                  }
               });
-        } else {
-            toggleMenu();
-            if (currentlyViewing !== event.target.id) {
-                loadContent(event.target.id);
-            }
-        }
+             }
+         }
     });
 
     // --> Breadcrumbs-click.

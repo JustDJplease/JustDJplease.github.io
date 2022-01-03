@@ -99,7 +99,7 @@
      font-size: 18px;
      border-left: 1px dashed #2b2d42;
 }
- #nav-chevron {
+ .nav-chevron {
      font-size: 18px;
      color: #2b2d42;
      vertical-align: middle;
