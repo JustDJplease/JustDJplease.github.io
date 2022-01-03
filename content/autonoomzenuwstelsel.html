@@ -1,0 +1,52 @@
+<!--
+  ~
+  ~     Disclaimer: De hier getoonde informatie is met grote zorg samengesteld.
+  ~     De auteur aanvaardt echter op geen enkele wijze aansprakelijkheid voor
+  ~     het gebruik van (onderdelen van) de inhoud. © 2022
+  ~
+  -->
+
+<article
+        id="settings"
+        data-breadcrumbs="true"
+        data-breadcrumbs-list-links='["main", "main"]'
+        data-breadcrumbs-list-titles='["Home", "Fysiologie"]'
+        hidden>
+</article>
+
+<script>
+$(document).ready(function(){
+
+    $('img').click(function(){
+        var modalId = '#' + $(this).data('modal-id');
+        $(modalId).fadeIn({
+            duration: 250,
+            start: function() {
+                $(this).css('display', 'flex')
+            }
+        });
+    });
+
+     $('.modal-close').click(function(){
+        $('.modal').fadeOut();
+    });
+
+});
+</script>
+
+<div class="tbl-header">
+    <table>
+        <thead>
+        <tr>
+            <th>Effect sympathicus &amp; parasympathicus</th>
+        </tr>
+        </thead>
+    </table>
+</div>
+<div class="tbl-content">
+    <table>
+        <tbody>
+        
+        </tbody>
+    </table>
+</div>
