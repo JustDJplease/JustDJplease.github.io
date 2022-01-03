@@ -14,31 +14,11 @@
         hidden>
 </article>
 
-<script>
-$(document).ready(function(){
-
-    $('img').click(function(){
-        var modalId = '#' + $(this).data('modal-id');
-        $(modalId).fadeIn({
-            duration: 250,
-            start: function() {
-                $(this).css('display', 'flex')
-            }
-        });
-    });
-
-     $('.modal-close').click(function(){
-        $('.modal').fadeOut();
-    });
-
-});
-</script>
-
 <div class="tbl-header">
     <table>
         <thead>
         <tr>
-            <th>Effect sympathicus &amp; parasympathicus</th>
+            <th>Anatomie</th>
         </tr>
         </thead>
     </table>
@@ -46,7 +26,166 @@ $(document).ready(function(){
 <div class="tbl-content">
     <table>
         <tbody>
-        
+            <tr>
+                <td><img src="img/content/anatomie-autonoom-zenuwstelsel.jpeg"/></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<h2>Effect sympathicus &amp; parasympathicus</h2>
+<div class="tbl-header">
+    <table>
+        <thead>
+        <tr>
+            <th>Orgaan</th>
+            <th class="tbl-centered">Effect<br />sympathicus</th>
+            <th class="tbl-centered">Effect<br />parasympathicus</th>
+        </tr>
+        </thead>
+    </table>
+</div>
+<div class="tbl-content">
+    <table>
+        <tbody>
+            <tr>
+                <td>Ogen</td>
+                <td>Dilatatie (&alpha;1)</td>
+                <td>Constrictie</td>
+            </tr>
+            <tr>
+                <td>Hart</td>
+                <td>
+                    <ul class="tbl-list">
+                        <li>&uarr; HR (&beta;)</li>
+                        <li>&uarr; Contractiliteit (&beta;)</li>
+                        <li>&uarr; Geleidingssnelheid</li>
+                    </ul>
+                </td>
+                <td>
+                    <ul class="tbl-list">
+                        <li>Afname</li>
+                        <li>Afname</li>
+                        <li>Afname</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td>Arteriolen</td>
+                <td>
+                    <ul class="tbl-list">
+                        <li>Vasoconstrictie (&alpha;)</li>
+                        <li>Vasodilatatie (&beta;)</li>
+                    </ul>
+                </td>
+                <td>
+                    <ul class="tbl-list">
+                        <li>Dilatatie</li>
+                        <li>&nbsp;</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td>Venen</td>
+                <td>
+                    <ul class="tbl-list">
+                        <li>Vasoconstrictie (&alpha;)</li>
+                        <li>Vasodilatatie (&beta;)</li>
+                    </ul>
+                </td>
+                <td>
+                    <ul class="tbl-list">
+                        <li>Dilatatie</li>
+                        <li>&nbsp;</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td>Longen</td>
+                <td>Bronchodilatatie (&beta;2)</td>
+                <td>Constrictie</td>
+            </tr>
+            <tr>
+                <td>Nieren</td>
+                <td>&uarr; Renine secretie (&beta;1)</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>Darmen</td>
+                <td>
+                    <ul class="tbl-list">
+                        <li>&darr; Peristaltiek, tonus</li>
+                        <li>Sphictercontractie (&alpha;)</li>
+                    </ul>
+                </td>
+                <td>
+                    <ul class="tbl-list">
+                        <ul class="tbl-list">
+                            <li>Toename</li>
+                            <li>Relaxatie</li>
+                        </ul>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td>Lever</td>
+                <td>
+                    <ul class="tbl-list">
+                        <li>&darr; Glycogeen (&alpha;1,&beta;2)</li>
+                        <li>Lipolyse</li>
+                    </ul>
+                </td>
+                <td>
+                    <ul class="tbl-list">
+                        <ul class="tbl-list">
+                            <li>Synthese</li>
+                            <li>&nbsp;</li>
+                        </ul>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td>Blaas</td>
+                <td>
+                    <ul class="tbl-list">
+                        <li>Spierrelaxatie (&beta;2)</li>
+                        <li>Sphinctertonus (&alpha;1)</li>
+                    </ul>
+                </td>
+                <td>
+                    <ul class="tbl-list">
+                        <ul class="tbl-list">
+                            <li>Contractie</li>
+                            <li>Relaxatie</li>
+                        </ul>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td>Uterus</td>
+                <td>
+                    <ul class="tbl-list">
+                        <li>Wee/Contractie (&alpha;1)</li>
+                        <li>Relaxatie (&beta;2)</li>
+                    </ul>
+                </td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>Metabolisme</td>
+                <td>Toegenomen</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>Vetweefsel</td>
+                <td>Lipolyse (&alpha;1,&beta;1,&beta;3)</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>Speeksel-<br/>klieren</td>
+                <td>Dik secreet (&alpha;1)</td>
+                <td>Waterig</td>
+            </tr>
         </tbody>
     </table>
 </div>

@@ -232,7 +232,7 @@
      margin: 0;
      padding: 0;
 }
- .tbl-list a:link, .medication a:visited {
+ .tbl-list a:link, .tbl-list a:visited {
      font-weight: 500;
      text-decoration: underline;
      color: #000;
