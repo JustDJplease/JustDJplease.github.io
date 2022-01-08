@@ -14,5 +14,422 @@
         hidden>
 </article>
 
-<h1>Maat & Getal</h1>
-<p><i>Deze pagina is nog niet gepubliceerd.</i></p>
+<script>
+$(document).ready(function(){
+
+    $('.tbl-header').click(function(){
+        console.log('click');
+        var bodyId = '#' + $(this).data('id');
+        console.log(bodyId);
+        if($(bodyId).is(':hidden')){
+            $(bodyId).slideDown();
+        }else{
+            $(bodyId).slideUp();
+        }
+    });
+});
+</script>
+
+<h1>Maat & Getal bij kinderen</h1>
+<h2>Algemeen</h2>
+<div class="tbl-header" data-id="alg">
+    <table>
+        <thead>
+        <tr>
+            <th>Medicatie doseren</th>
+        </tr>
+        </thead>
+    </table>
+</div>
+<div class="tbl-content" id="alg" hidden>
+    <table>
+        <tbody>
+        <tr>
+            <td> Gewicht in kg</td>
+            <td> 2,5 x (leeftijd in jaren + 8)</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<br/>
+<h2><span class="text-box-red">A</span> Airway</h2>
+<div class="tbl-header" data-id="etc">
+    <table>
+        <thead>
+        <tr>
+            <th>Endotracheale tube (conventioneel)</th>
+        </tr>
+        </thead>
+    </table>
+</div>
+<div class="tbl-content" id="etc" hidden>
+    <table>
+        <tbody>
+        <tr>
+            <td class="tbl-centered"><b> Gewicht of leeftijd</b></td>
+            <td class="tbl-centered"><b> Tubemaat (ID)</b></td>
+            <td class="tbl-centered"><b> Diepte in cm</b></td>
+        </tr>
+        <tr>
+            <td> &lt; 800 g</td>
+            <td> 2</td>
+            <td> tandenrij</td>
+        </tr>
+        <tr>
+            <td> 1 kg</td>
+            <td> 2,5</td>
+            <td> 7</td>
+        </tr>
+        <tr>
+            <td> &lt; 2 kg</td>
+            <td> 2,5</td>
+            <td> 8</td>
+        </tr>
+        <tr>
+            <td> &lt; 3 kg</td>
+            <td> 3</td>
+            <td> 9</td>
+        </tr>
+        <tr>
+            <td> 3 kg &ndash; 6 mnd.</td>
+            <td> 3,5</td>
+            <td> 10</td>
+        </tr>
+        <tr>
+            <td> 6 &ndash; 12 mnd.</td>
+            <td> 3,5 - 4</td>
+            <td> 11 - 12</td>
+        </tr>
+        <tr>
+            <td> 1 &ndash; 2 jr.</td>
+            <td> 4,5 - 5</td>
+            <td> 12 - 13</td>
+        </tr>
+        <tr>
+            <td> 2 &ndash; 4 jr.</td>
+            <td> 5 - 5,5</td>
+            <td> 13 - 14</td>
+        </tr>
+        <tr>
+            <td> 4 &ndash; 6 jr.</td>
+            <td> 5,5 - 6</td>
+            <td> 14 - 15</td>
+        </tr>
+        <tr>
+            <td> 6 &ndash; 8 jr.</td>
+            <td> 6 - 6,5</td>
+            <td> 15 - 16</td>
+        </tr>
+        <tr>
+            <td> 8 &ndash; 10 jr.</td>
+            <td> 5,5 - 6 met cuff</td>
+            <td> 16 - 17</td>
+        </tr>
+        <tr>
+            <td> 10 &ndash; 12 jr.</td>
+            <td> 6 - 6,5 met cuff</td>
+            <td> 18 - 19</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<br/>
+<div class="tbl-header" data-id="etm">
+    <table>
+        <thead>
+        <tr>
+            <th>Endotracheale tube (Microcuff&reg;)</th>
+        </tr>
+        </thead>
+    </table>
+</div>
+<div class="tbl-content" id="etm" hidden>
+    <table>
+        <tbody>
+        <tr>
+            <td class="tbl-centered"><b>Tubemaat ID (mm)</b></td>
+            <td class="tbl-centered"><b>Leeftijd/gewicht jaren/kg</b></td>
+        </tr>
+        <tr>
+            <td> 3,0</td>
+            <td> &agrave; terme &ge; 3 kg tot &lt; 8 mnd</td>
+        </tr>
+        <tr>
+            <td> 3,5</td>
+            <td> 8 mnd tot &lt; 2 jaar</td>
+        </tr>
+        <tr>
+            <td> 4,0</td>
+            <td> 2 tot &lt; 4 jr.</td>
+        </tr>
+        <tr>
+            <td> 4,5</td>
+            <td> 4 tot &lt; 6 jr.</td>
+        </tr>
+        <tr>
+            <td> 5,0</td>
+            <td> 6 tot &lt; 8 jr.</td>
+        </tr>
+        <tr>
+            <td> 5,5</td>
+            <td> 8 tot &lt; 10 jr.</td>
+        </tr>
+        <tr>
+            <td> 6,0</td>
+            <td> 10 tot &lt; 12 jr.</td>
+        </tr>
+        <tr>
+            <td> 6,6</td>
+            <td> 12 tot &lt; 14 jr.</td>
+        </tr>
+        <tr>
+            <td> 7,0</td>
+            <td> 14 tot &lt; 16 jr.</td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                Opmerking: inflatiedruk ballon &le; 20 cm H2O
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<br/>
+<div class="tbl-header" data-id="lma">
+    <table>
+        <thead>
+        <tr>
+            <th>Larynxmaskers</th>
+        </tr>
+        </thead>
+    </table>
+</div>
+<div class="tbl-content" id="lma" hidden>
+    <table>
+        <tbody>
+        <tr>
+            <td class="tbl-centered"><b> Gewicht in kg </b></td>
+            <td class="tbl-centered"><b> Maat </b></td>
+            <td class="tbl-centered"><b> Volume ml </b></td>
+        </tr>
+        <tr>
+            <td> &lt; 5</td>
+            <td> 1</td>
+            <td> 2 - 4</td>
+        </tr>
+        <tr>
+            <td> 5 - 10</td>
+            <td> 1,5</td>
+            <td> &lt; 6</td>
+        </tr>
+        <tr>
+            <td> 10 - 20</td>
+            <td> 2</td>
+            <td> &lt; 10</td>
+        </tr>
+        <tr>
+            <td> 15 - 30</td>
+            <td> 2,5</td>
+            <td> &lt; 15</td>
+        </tr>
+        <tr>
+            <td> &gt; 30</td>
+            <td> 3</td>
+            <td> &lt; 25</td>
+        </tr>
+        <tr>
+            <td> Volwassene</td>
+            <td> 4</td>
+            <td> &lt; 35</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<br/>
+<h2><span class="text-box-red">B</span> Breathing</h2>
+<div class="tbl-header" data-id="ahm">
+    <table>
+        <thead>
+        <tr>
+            <th>Ademhalingsfrequentie in rust naar leeftijdsgroep</th>
+        </tr>
+        </thead>
+    </table>
+</div>
+<div class="tbl-content" id="ahm" hidden>
+    <table>
+        <tbody>
+        <tr>
+            <td class="tbl-centered"><b> Leeftijd </b></td>
+            <td class="tbl-centered"><b> Ademfrequentie per minuut </b></td>
+        </tr>
+        <tr>
+            <td> &lt; 1 jaar</td>
+            <td> 35-40</td>
+        </tr>
+        <tr>
+            <td> 1-2 jaar</td>
+            <td> 25-35</td>
+        </tr>
+        <tr>
+            <td> 2-5 jaar</td>
+            <td> 25-30</td>
+        </tr>
+        <tr>
+            <td> 5-12 jaar</td>
+            <td> 20-25</td>
+        </tr>
+        <tr>
+            <td> &gt; 12 jaar</td>
+            <td> 15-20</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<br/>
+<h2><span class="text-box-red">C</span> Circulation</h2>
+<div class="tbl-header" data-id="bld">
+    <table>
+        <thead>
+        <tr>
+            <th>Bloed & volumes</th>
+        </tr>
+        </thead>
+    </table>
+</div>
+<div class="tbl-content" id="bld" hidden>
+    <table>
+        <tbody>
+        <tr>
+            <td> Bloedvolume (EBV)<br />neonaat</td>
+            <td> 80 -90 ml/kg</td>
+        </tr>
+        <tr>
+            <td> Bloedvolume (EBV)<br />als &gt; 3 maanden oud</td>
+            <td> 70 &ndash; 80 ml/kg</td>
+        </tr>
+        <tr>
+            <td> Max. bloedverlies</td>
+            <td class="tbl-centered">EBV &times; (Hb<sub>nu</sub>– Hb<sub>min</sub>)<br/><hr> Hb<sub>nu</sub></td>
+        </tr>
+        <tr>
+            <td> Extracellulaire volume</td>
+            <td> 20 (in %)</td>
+        </tr>
+        <tr>
+            <td> Cardiac output</td>
+            <td> 250 ml/kg/min</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<br/>
+<div class="tbl-header" data-id="vgt">
+    <table>
+        <thead>
+        <tr>
+            <th>Vochtbehoefte</th>
+        </tr>
+        </thead>
+    </table>
+</div>
+<div class="tbl-content" id="vgt" hidden>
+    <table>
+        <tbody>
+        <tr>
+            <td class="tbl-centered"><b> Gewicht</b></td>
+            <td class="tbl-centered"><b> ml/kg/uur</b></td>
+        </tr>
+        <tr>
+            <td> Neonaat</td>
+            <td> 4</td>
+        </tr>
+        <tr>
+            <td> &lt; 10 kg</td>
+            <td> 4</td>
+        </tr>
+        <tr>
+            <td> 10 &ndash; 20 kg</td>
+            <td> 40 + 2 ml/kg (per kg &gt; 10 kg)</td>
+        </tr>
+        <tr>
+            <td> &gt; 20 kg</td>
+            <td> 60 + 1 ml/kg (per kg &gt; 20 kg)</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<br/>
+
+
+<div class="tbl-header" data-id="hrm">
+    <table>
+        <thead>
+        <tr>
+            <th>Normale hartfrequentie per minuut</th>
+        </tr>
+        </thead>
+    </table>
+</div>
+<div class="tbl-content" id="hrm" hidden>
+    <table>
+        <tbody>
+        <tr>
+            <td> &lt; 1 jaar</td>
+            <td> 110-180</td>
+        </tr>
+        <tr>
+            <td> 1-2 jaar</td>
+            <td> 100-150</td>
+        </tr>
+        <tr>
+            <td> 2-5 jaar</td>
+            <td> 95-140</td>
+        </tr>
+        <tr>
+            <td> 5-12 jaar</td>
+            <td> 80-120</td>
+        </tr>
+        <tr>
+            <td> &gt; 12 jaar</td>
+            <td> 60-100</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<br/>
+<div class="tbl-header" data-id="sbd">
+    <table>
+        <thead>
+        <tr>
+            <th>Normale systolische bloeddruk in mm Hg</th>
+        </tr>
+        </thead>
+    </table>
+</div>
+<div class="tbl-content" id="sbd" hidden>
+    <table>
+        <tbody>
+        <tr>
+            <td> &lt; 1 jaar</td>
+            <td> 70-90</td>
+        </tr>
+        <tr>
+            <td> 1-2 jaar</td>
+            <td> 80-95</td>
+        </tr>
+        <tr>
+            <td> 2-5 jaar</td>
+            <td> 80-100</td>
+        </tr>
+        <tr>
+            <td> 5-12 jaar</td>
+            <td> 90-110</td>
+        </tr>
+        <tr>
+            <td> &gt; 12 jaar</td>
+            <td> 100-120</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
