@@ -1,0 +1,93 @@
+<!--
+  ~
+  ~     Disclaimer: De hier getoonde informatie is met grote zorg samengesteld.
+  ~     De auteur aanvaardt echter op geen enkele wijze aansprakelijkheid voor
+  ~     het gebruik van (onderdelen van) de inhoud. © 2022
+  ~
+  -->
+
+<article
+        id="settings"
+        data-breadcrumbs="true"
+        data-breadcrumbs-list-links='["main", "main"]'
+        data-breadcrumbs-list-titles='["Home", "Fysiologie"]'
+        hidden>
+</article>
+
+<script>
+$(document).ready(function(){
+
+    $('.var-param').click(function(){
+        var varId = '#' + $(this).data('id');
+        if($(varId).is(':hidden')){
+            $(varId).slideDown({
+                duration: 250,
+                start: function() {
+                  $(this).css('display', 'flex');
+            }
+        });
+        }else{
+            $(varId).slideUp();
+        }
+    });
+});
+
+</script>
+
+<h1>Normaalwaarden hemodynamiek</h1>
+
+<div class="var-title">Normaalwaarden</div>
+<div class="var-wrapper">
+    <div class="var-param" data-id="sao2">
+        <div class="var-header">
+            <div class="left">Arterial Oxygen Saturation</div>
+            <div class="right">SaO<sub>2</sub></div>
+        </div>
+        <div class="var-content" id="sao2">
+            <div>Berekenen: n.v.t.</div>
+            <div>Normaal: 95 - 100 %</div>
+        </div>
+    </div>
+    <div class="var-param" data-id="svo2">
+        <div class="var-header">
+            <div class="left">Mixed Venous Saturation</div>
+            <div class="right">SvO<sub>2</sub></div>
+        </div>
+        <div class="var-content" id="svo2">
+            <div>Berekenen: n.v.t.</div>
+            <div>Normaal: 60 - 80 %</div>
+        </div>
+    </div>
+    <div class="var-param" data-id="scvo2">
+        <div class="var-header">
+            <div class="left">Central Venous Oxygen Saturation</div>
+            <div class="right">ScvO<sub>2</sub></div>
+        </div>
+        <div class="var-content" id="scvo2">
+            <div>Toelichting: Enkel vena cava superior, dus +/- veneuze saturatie in het brein.</div>
+            <div>Berekenen: n.v.t.</div>
+            <div>Normaal: 60 - 70 %</div>
+        </div>
+    </div>
+    <div class="var-param" data-id="bp">
+        <div class="var-header">
+            <div class="left">Arterial Blood Pressure</div>
+            <div class="right">BP of RR</div>
+        </div>
+        <div class="var-content" id="bp">
+            <div>Berekenen: n.v.t.</div>
+            <div>Normaal systolisch (SBP): 90 - 140 mmHg</div>
+            <div>Normaal diastolisch (DBP): 60 - 90 mmHg</div>
+        </div>
+    </div>
+    <div class="var-param" data-id="map">
+        <div class="var-header">
+            <div class="left">Mean Arterial Pressure</div>
+            <div class="right">MAP</div>
+        </div>
+        <div class="var-content" id="map">
+            <div>Berekenen: SBP + (2 x DBP)/3</div>
+            <div>Normaal: 70 - 105 mmHg</div>
+        </div>
+    </div>
+</div>
