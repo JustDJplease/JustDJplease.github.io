@@ -16,9 +16,10 @@
 
 <script>
 $(document).ready(function(){
+    replaceParameters();
 
     $('.var-param').click(function(){
-        var varId = '#' + $(this).data('id');
+        var varId = '.' + $(this).data('id');
         if($(varId).is(':hidden')){
             $(varId).slideDown({
                 duration: 250,
@@ -38,56 +39,26 @@ $(document).ready(function(){
 
 <div class="var-title">Normaalwaarden</div>
 <div class="var-wrapper">
-    <div class="var-param" data-id="sao2">
-        <div class="var-header">
-            <div class="left">Arterial Oxygen Saturation</div>
-            <div class="right">SaO<sub>2</sub></div>
-        </div>
-        <div class="var-content" id="sao2">
-            <div>Berekenen: n.v.t.</div>
-            <div>Normaal: 95 - 100 %</div>
-        </div>
-    </div>
-    <div class="var-param" data-id="svo2">
-        <div class="var-header">
-            <div class="left">Mixed Venous Saturation</div>
-            <div class="right">SvO<sub>2</sub></div>
-        </div>
-        <div class="var-content" id="svo2">
-            <div>Berekenen: n.v.t.</div>
-            <div>Normaal: 60 - 80 %</div>
-        </div>
-    </div>
-    <div class="var-param" data-id="scvo2">
-        <div class="var-header">
-            <div class="left">Central Venous Oxygen Saturation</div>
-            <div class="right">ScvO<sub>2</sub></div>
-        </div>
-        <div class="var-content" id="scvo2">
-            <div>Toelichting: Enkel vena cava superior, dus +/- veneuze saturatie in het brein.</div>
-            <div>Berekenen: n.v.t.</div>
-            <div>Normaal: 60 - 70 %</div>
-        </div>
-    </div>
-    <div class="var-param" data-id="bp">
-        <div class="var-header">
-            <div class="left">Arterial Blood Pressure</div>
-            <div class="right">BP of RR</div>
-        </div>
-        <div class="var-content" id="bp">
-            <div>Berekenen: n.v.t.</div>
-            <div>Normaal systolisch (SBP): 90 - 140 mmHg</div>
-            <div>Normaal diastolisch (DBP): 60 - 90 mmHg</div>
-        </div>
-    </div>
-    <div class="var-param" data-id="map">
-        <div class="var-header">
-            <div class="left">Mean Arterial Pressure</div>
-            <div class="right">MAP</div>
-        </div>
-        <div class="var-content" id="map">
-            <div>Berekenen: SBP + (2 x DBP)/3</div>
-            <div>Normaal: 70 - 105 mmHg</div>
-        </div>
-    </div>
+    <p class="param" data-name="sao2"></p>
+    <p class="param" data-name="svo2"></p>
+    <p class="param" data-name="scvo2"></p>
+    <p class="param" data-name="bp"></p>
+    <p class="param" data-name="map"></p>
+    <p class="param" data-name="cvd"></p>
+    <p class="param" data-name="rap"></p>
+    <p class="param" data-name="rvp"></p>
+    <p class="param" data-name="pap"></p>
+    <p class="param" data-name="mpap"></p>
+    <p class="param" data-name="paop"></p>
+    <p class="param" data-name="lap"></p>
+    <p class="param" data-name="co"></p>
+    <p class="param" data-name="ci"></p>
+    <p class="param" data-name="sv"></p>
+    <p class="param" data-name="svi"></p>
+    <p class="param" data-name="svv"></p>
+    <p class="param" data-name="svr"></p>
+    <p class="param" data-name="svri"></p>
+    <p class="param" data-name="pvr"></p>
+    <p class="param" data-name="pvri"></p>
+    <p class="param" data-name="cpp"></p>
 </div>
