@@ -201,7 +201,7 @@
      text-align: left;
      vertical-align: middle;
 }
- tr:nth-child(even) {
+ tr:nth-child(odd) {
      background-color: #fff;
 }
  .tbl-header {
