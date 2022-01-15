@@ -69,7 +69,7 @@
 
 /* Breadcrumbs section */
  #breadcrumbs {
-     background-color: #edf2f4;
+     background-color: #fff;
      color: #2b2d42;
      display: none;
      font-size: 14px;
@@ -82,7 +82,7 @@
 
 /* Navigation menu section */
  #nav {
-     background-color: #edf2f4;
+     background-color: #fff;
      display: none;
      flex-direction: column;
      font-size: 20px;
