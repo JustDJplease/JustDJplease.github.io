@@ -192,12 +192,12 @@ function registerTable(id, url, sortableColums){
 
 function filterGlobal() {
     $('table').DataTable().search(
-        $('#globalFilter').val()
+        $('.data-title input').val()
     ).draw();
 }
 
 function registerSearchBox(id){
-    $('#' + id).on('keyup click', function () {
+    $('.data-title input').on('keyup click', function () {
         filterGlobal();
     });
 }

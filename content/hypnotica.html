@@ -16,18 +16,18 @@
 
 <script>
 $(document).ready( function () {
-    registerTable("tblHypnotica", "tblHypnotica.json", 1);
+    registerTable("data-hypnotica", "tblHypnotica.json", 1);
     registerSearchBox("globalFilter");
 });
 </script>
 
 <h1>Hypnotica</h1>
-<div class="new-tbl-header">
-    <h2>Intraveneuze medicatie</h2>
-    <input id="globalFilter" type="search" placeholder="Search">
-</div>
-<div class="new-tbl">
-    <table id="tblHypnotica">
+<div class="data-table">
+    <div class="data-title">
+        <h2>Intraveneuze medicatie</h2>
+        <input type="search" placeholder="Search"/>
+    </div>
+    <table id="data-hypnotica">
         <thead>
         <tr>
             <th>Medicatie</th>

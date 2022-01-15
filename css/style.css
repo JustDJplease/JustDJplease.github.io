@@ -331,49 +331,54 @@
 }
 
 /* New Table design */
-.new-tbl table {
+ .data-table table {
     margin-top: 10px;
     margin-bottom: 10px;
 }
 
-.new-tbl .odd {
-    background-color: #fff;
-}
-
-.new-tbl .even {
-    background-color: #edf2f4;
-}
-
-.new-tbl thead {
+ .data-table thead {
     background-color: #2b2d42;
     color: #fff;
     font-weight: 500;
 }
 
-.new-tbl tr {
+ .data-table tr {
     padding: 5px 5px;
 }
 
-table.dataTable thead .sorting_asc,
-table.dataTable thead .sorting {
+ .data-table .odd {
+    background-color: #fff;
+}
+
+ .data-table .even {
+    background-color: #edf2f4;
+}
+
+ table.dataTable thead .sorting_asc, table.dataTable thead .sorting {
     background-image: url("/img/tbl/sort-down-solid.svg") !important;
-        background-position: right;
-        background-repeat: no-repeat;
-        background-size: 12px;
-        background-position-x: calc(100% - 10px);
-        background-position-y: calc(100% - 10px);
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: 12px;
+    background-position-x: calc(100% - 10px);
+    background-position-y: calc(100% - 10px);
 }
 
-table.dataTable thead .sorting_desc {
+ table.dataTable thead .sorting_desc {
     background-image: url("/img/tbl/sort-up-solid.svg") !important;
-        background-position: right;
-        background-repeat: no-repeat;
-        background-size: 12px;
-        background-position-x: calc(100% - 10px);
-        background-position-y: calc(100% - 3px);
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: 12px;
+    background-position-x: calc(100% - 10px);
+    background-position-y: calc(100% - 3px);
 }
 
-.new-tbl-header input {
+ .data-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+ .data-title input {
     font-size: 12px;
     border: 1px solid #2b2d42;
     border-radius: 5px;
@@ -384,8 +389,4 @@ table.dataTable thead .sorting_desc {
     text-align: center;
 }
 
-.new-tbl-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+/* Done */
