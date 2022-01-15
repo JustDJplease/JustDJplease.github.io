@@ -80,3 +80,8 @@ var fenylefrine = ["fenylefrine", [], "f/fenylefrine__injectie_", false];
 var isoprenaline = ["isoprenaline", [], "i/isoprenaline", false];
 var milrinon = ["milrinon", [], "m/milrinon", false];
 var noradrenaline = ["noradrenaline", [], "n/noradrenaline", false];
+
+// Paralytic
+var rocuronium = ["rocuronium", ["Esmeron"], "r/rocuronium", false];
+var cisatracurium = ["cisatracurium", ["Nimbex"], 'c/cisatracurium', false];
+var succinylcholine = ["succinylcholine", ["Suxamethonium"], "s/succinylcholine", false];
