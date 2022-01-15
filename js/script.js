@@ -171,3 +171,33 @@ $(document).ready(function() {
 
     loadContent("main");
 });
+
+// ---------------------------------- //
+// DATA TABLE API                     //
+// ---------------------------------- //
+
+function registerTable(id, url, sortableColums){
+    $("#" + id).DataTable({
+        "ajax": 'content/tables/' + url,
+        "drawCallback": function(settings){replacePlaceholders();},
+        "searching":true,
+        "dom": 't',
+        "paging": false,
+        "ordering": true,
+        "order": [[0, 'asc']],
+        "columnDefs": [{orderable: false, targets: sortableColums}],
+        "info": false
+    });
+}
+
+function filterGlobal() {
+    $('table').DataTable().search(
+        $('#globalFilter').val()
+    ).draw();
+}
+
+function registerSearchBox(id){
+    $('#' + id).on('keyup click', function () {
+        filterGlobal();
+    });
+}

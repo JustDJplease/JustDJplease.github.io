@@ -1,0 +1,24 @@
+{
+    "data": [
+        [
+            "<p class=\"placeholder\" data-name=\"propofol\">propofol</p>",
+            "<ul class=\"tbl-list\"><li>Inductie: 1 - 2 mg/kg</li><li>Onderhoud: 4 - 12 mg/kg/uur</li><li>Sedatie: 1 - 2 mg/kg/uur</li></ul>"
+        ],
+        [
+            "<p class=\"placeholder\" data-name=\"thiopental\">thiopental</p>",
+            "<ul class=\"tbl-list\"><li>Inductie: 3 - 5 mg/kg</li><li>Onderhoud: ongeschikt</li></ul>"
+        ],
+        [
+            "<p class=\"placeholder\" data-name=\"etomidaat\">etomidaat</p>",
+            "<ul class=\"tbl-list\"><li>Inductie: 0,2 mg/kg</li><li>Onderhoud: ongeschikt</li></ul>"
+        ],
+        [
+            "<p class=\"placeholder\" data-name=\"esketamine\">esketamine</p>",
+            "<ul class=\"tbl-list\"><li>Analgetisch: 0,1 - 0,2 mg/kg/uur</li><li>Inductie: 1 - 2 mg/kg</li><li>Onderhoud: 2 - 4 mg/kg/uur</li></ul>"
+        ],
+        [
+            "<p class=\"placeholder\" data-name=\"midazolam\">midazolam</p>",
+            "<ul class=\"tbl-list\"><li>Opladen: 0,1 - 4 mg/kg</li><li>Onderhoud: 0,05 - 0,2 mg/kg/uur</li></ul>"
+        ]
+    ]
+}

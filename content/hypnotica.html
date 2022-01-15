@@ -16,93 +16,23 @@
 
 <script>
 $(document).ready( function () {
-
-    $('table').DataTable({
-        "searching":true,
-        "dom": 't',
-        "paging": false,
-        "ordering": true,
-        "order": [[0, 'asc']],
-        "columnDefs": [{
-            orderable: false, targets: 1
-        }],
-        info: false
-    });
-
-    function filterGlobal() {
-        $('table').DataTable().search(
-            $('#globalFilter').val()
-        ).draw();
-    }
-
-    $('#globalFilter').on('keyup click', function () {
-        filterGlobal();
-    });
+    registerTable("tblHypnotica", "tblHypnotica.json", 1);
+    registerSearchBox("globalFilter");
 });
 </script>
 
 <h1>Hypnotica</h1>
 <div class="new-tbl-header">
     <h2>Intraveneuze medicatie</h2>
-    <div class="new-tbl-search">
-        <span class="material-icons">search</span>
-        <input id="globalFilter" type="search" placeholder="Search">
-    </div>
+    <input id="globalFilter" type="search" placeholder="Search">
 </div>
 <div class="new-tbl">
-    <table>
+    <table id="tblHypnotica">
         <thead>
         <tr>
             <th>Medicatie</th>
             <th>Dosering</th>
         </tr>
         </thead>
-        <tbody>
-        <tr>
-            <td><p class="placeholder" data-name="propofol"></p></td>
-            <td>
-                <ul class="tbl-list">
-                    <li>Inductie: 1,0 - 2,5 mg/kg</li>
-                    <li>Onderhoud: 4 - 12 mg/kg</li>
-                </ul>
-            </td>
-        </tr>
-        <tr>
-            <td><p class="placeholder" data-name="thiopental"></p></td>
-            <td>
-                <ul class="tbl-list">
-                    <li>Inductie: 3 - 6 mg/kg</li>
-                    <li>Onderhoud: n.v.t.</li>
-                </ul>
-            </td>
-        </tr>
-        <tr>
-            <td><p class="placeholder" data-name="etomidaat"></p></td>
-            <td>
-                <ul class="tbl-list">
-                    <li>Inductie: 0,2 - 0,4 mg/kg</li>
-                    <li>Onderhoud: n.v.t.</li>
-                </ul>
-            </td>
-        </tr>
-        <tr>
-            <td><p class="placeholder" data-name="esketamine"></p></td>
-            <td>
-                <ul class="tbl-list">
-                    <li>Analgetisch: 0,05 - 0,8 mg/kg</li>
-                    <li>Inductie: 0,5 - 2 mg/kg</li>
-                    <li>Onderhoud: 2 - 15 &mu;g/kg/min</li>
-                </ul>
-            </td>
-        </tr>
-        <tr>
-            <td><p class="placeholder" data-name="midazolam"></p></td>
-            <td>
-                <ul class="tbl-list">
-                    <li>Onderhoud: 0,5 - 4 mg/kg</li>
-                </ul>
-            </td>
-        </tr>
-        </tbody>
     </table>
 </div>
