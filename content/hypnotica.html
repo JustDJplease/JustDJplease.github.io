@@ -14,9 +14,42 @@
         hidden>
 </article>
 
+<script>
+$(document).ready( function () {
+
+    $('table').DataTable({
+        "searching":true,
+        "dom": 't',
+        "paging": false,
+        "ordering": true,
+        "order": [[0, 'asc']],
+        "columnDefs": [{
+            orderable: false, targets: 1
+        }],
+        info: false
+    });
+
+    function filterGlobal() {
+        $('table').DataTable().search(
+            $('#globalFilter').val()
+        ).draw();
+    }
+
+    $('#globalFilter').on('keyup click', function () {
+        filterGlobal();
+    });
+});
+</script>
+
 <h1>Hypnotica</h1>
-<h2>Intraveneuze medicatie</h2>
-<div class="tbl-header">
+<div class="new-tbl-header">
+    <h2>Intraveneuze medicatie</h2>
+    <div class="new-tbl-search">
+        <span class="material-icons">search</span>
+        <input id="globalFilter" type="search" placeholder="Search">
+    </div>
+</div>
+<div class="new-tbl">
     <table>
         <thead>
         <tr>
@@ -24,10 +57,6 @@
             <th>Dosering</th>
         </tr>
         </thead>
-    </table>
-</div>
-<div class="tbl-content">
-    <table>
         <tbody>
         <tr>
             <td><p class="placeholder" data-name="propofol"></p></td>

@@ -329,3 +329,74 @@
     text-align: right;
     color: #333;
 }
+
+/* New Table design */
+.new-tbl table {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.new-tbl .odd {
+    background-color: #fff;
+}
+
+.new-tbl .even {
+    background-color: #edf2f4;
+}
+
+.new-tbl thead {
+    background-color: #2b2d42;
+    color: #fff;
+    font-weight: 500;
+}
+
+.new-tbl tr {
+    padding: 5px 5px;
+}
+
+table.dataTable thead .sorting_asc,
+table.dataTable thead .sorting {
+    background-image: url("/img/tbl/sort-down-solid.svg") !important;
+        background-position: right;
+        background-repeat: no-repeat;
+        background-size: 12px;
+        background-position-x: calc(100% - 10px);
+        background-position-y: calc(100% - 10px);
+}
+
+table.dataTable thead .sorting_desc {
+    background-image: url("/img/tbl/sort-up-solid.svg") !important;
+        background-position: right;
+        background-repeat: no-repeat;
+        background-size: 12px;
+        background-position-x: calc(100% - 10px);
+        background-position-y: calc(100% - 3px);
+}
+
+.new-tbl-search label {
+    font-size: 12px;
+    color: #2b2d42;
+}
+
+.new-tbl-search input {
+    font-size: 12px;
+    border: 1px solid #2b2d42;
+    border-radius: 5px;
+    background-color: #edf2f4;
+    padding: 0px 10px;
+    width: 100px;
+    height: 25px;
+    text-align: center;
+}
+
+.new-tbl-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.new-tbl-search {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
