@@ -16,7 +16,8 @@
 
 <script>
 $(document).ready( function () {
-    registerTable("data-relaxantia", "tblRelaxantia.json", [1,2,3]);
+    registerTable("data-relaxantia", "tblRelaxantia.json", [1,2]);
+    registerTable("data-relaxantia-time", "tblRelaxantiaTime.json", [1,2]);
     registerSearchBox("globalFilter");
 });
 </script>
@@ -31,14 +32,25 @@ $(document).ready( function () {
         <thead>
         <tr>
             <th>Medicatie</th>
-            <th>ED<sub>95</sub><br />(mg/kg)</th>
-            <th>Dosis<br />(mg/kg)</th>
+            <th>ED<sub>95</sub></th>
+            <th>Dosis</th>
+        </tr>
+        </thead>
+    </table>
+    <div class="data-title">
+        <h2>In- en uitwerktijd</h2>
+    </div>
+    <table id="data-relaxantia-time" class="searchable">
+        <thead>
+        <tr>
+            <th>Medicatie</th>
             <th>T<sub>intubatie</sub></th>
+            <th>T<sub>werking</sub></th>
         </tr>
         </thead>
         <tfoot>
         <tr>
-            <td colspan="4">Opmerking.</td>
+            <td colspan="3"><i>Succinylcholine is de enige depolariserende spierverslapper. Binnen 30 seconden na toedienen treden uitgebreide fasiculaties op. Vlot hierna zijn er ideale intubatie-condities. Post-operatief kan er spierpijn zijn bij de patiënt.</i></td>
         </tr>
         </tfoot>
     </table>

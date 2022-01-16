@@ -332,6 +332,7 @@
 
 /* New Table design */
  .data-table table {
+    max-width: 100%;
     margin-top: 10px;
     margin-bottom: 10px;
     border-spacing: 2px !important;
@@ -342,6 +343,10 @@
     background-color: #2b2d42;
     color: #fff;
     font-weight: 500;
+}
+
+ .data-table tfoot td {
+    border-top: 1px solid #111;
 }
 
  .data-table tr {

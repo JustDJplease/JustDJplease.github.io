@@ -2,28 +2,28 @@
   "data": [
     [
       "rocuronium",
-      "0,3 mg/kg",
-      "0,6 mg/kg"
+      "2-3 min",
+      "20-30 min"
     ],
     [
       "cisatracurium",
-      "0,15 mg/kg",
-      "0,3 mg/kg"
+      "2 min",
+      "13-30 min"
     ],
     [
       "succinylcholine",
-      "0,5 mg/kg",
-      "1 mg/kg"
+      "30-60 sec",
+      "5-8 min"
     ],
     [
       "atracurium",
-      "0,25 mg/kg",
-      "0,5 mg/kg"
+      "1,5-2 min",
+      "15-35 min"
     ],
     [
       "mivacurium",
-      "0,1 mg/kg",
-      "0,2 mg/kg"
+      "2-2,5 min",
+      "10-15 min"
     ]
   ]
 }
