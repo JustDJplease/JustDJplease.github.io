@@ -120,3 +120,5 @@ var noradrenaline = ["noradrenaline", [], "n/noradrenaline", false];
 var rocuronium = ["rocuronium", ["Esmeron"], "r/rocuronium", false];
 var cisatracurium = ["cisatracurium", ["Nimbex"], 'c/cisatracurium', false];
 var succinylcholine = ["succinylcholine", ["Suxamethonium"], "s/succinylcholine", false];
+var atracurium = ["atracurium", ["Tracrium"], "a/atracurium", false];
+var mivacurium = ["mivacurium", ["Mivacron"], "m/mivacurium", false];

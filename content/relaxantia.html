@@ -14,38 +14,32 @@
         hidden>
 </article>
 
+<script>
+$(document).ready( function () {
+    registerTable("data-relaxantia", "tblRelaxantia.json", [1,2,3]);
+    registerSearchBox("globalFilter");
+});
+</script>
+
 <h1>Relaxantia</h1>
-<h2>Intraveneuze medicatie</h2>
-<div class="tbl-header">
-    <table>
+<div class="data-table">
+    <div class="data-title">
+        <h2>Intraveneuze medicatie</h2>
+        <input type="search" placeholder="Search"/>
+    </div>
+    <table id="data-relaxantia" class="searchable">
         <thead>
         <tr>
             <th>Medicatie</th>
-            <th>ED95% / Dosering</th>
+            <th>ED<sub>95</sub><br />(mg/kg)</th>
+            <th>Dosis<br />(mg/kg)</th>
             <th>T<sub>intubatie</sub></th>
         </tr>
         </thead>
+        <tfoot>
+        <tr>
+            <td colspan="4">Opmerking.</td>
+        </tr>
+        </tfoot>
     </table>
 </div>
-<div class="tbl-content">
-    <table>
-        <tbody>
-        <tr>
-            <td><p class="placeholder" data-name="rocuronium"></p></td>
-            <td>0,3 / 0,6 mg/kg</td>
-            <td>3 min</td>
-        </tr>
-        <tr>
-            <td><p class="placeholder" data-name="cisatracurium"></p></td>
-            <td>0.15 / 0,15-0,3 mg/kg</td>
-            <td>2 min</td>
-        </tr>
-        <tr>
-            <td><p class="placeholder" data-name="succinylcholine"></p></td>
-            <td>0.5 / 1 mg/kg</td>
-            <td>1 min</td>
-        </tr>
-        </tbody>
-    </table>
-</div>
-
