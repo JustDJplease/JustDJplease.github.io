@@ -14,5 +14,31 @@
         hidden>
 </article>
 
+<script>
+$(document).ready( function () {
+    registerTable("data-lokale-anesthetica", "tblLokaleAnestheticaTime.json", [1,2]);
+    registerSearchBox("globalFilter");
+});
+</script>
+
 <h1>Lokale anesthetica</h1>
-<p><i>Deze pagina is nog niet gepubliceerd.</i></p>
+<div class="data-table">
+    <div class="data-title">
+        <h2>In- en uitwerktijd</h2>
+        <input type="search" placeholder="Search"/>
+    </div>
+    <table id="data-lokale-anesthetica" class="searchable">
+        <thead>
+        <tr>
+            <th>Medicatie</th>
+            <th>T<sub>effect</sub></th>
+            <th>T<sub>werking</sub></th>
+        </tr>
+        </thead>
+        <tfoot>
+        <tr>
+            <td colspan="3"><i>Werkingsduur is sterk afhankelijk van de manier van toedienen. Hierboven weergegeven duur is gegeven voor lokale infiltratie.</i></td>
+        </tr>
+        </tfoot>
+    </table>
+</div>

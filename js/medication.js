@@ -122,3 +122,10 @@ var cisatracurium = ["cisatracurium", ["Nimbex"], 'c/cisatracurium', false];
 var succinylcholine = ["succinylcholine", ["Suxamethonium"], "s/succinylcholine", false];
 var atracurium = ["atracurium", ["Tracrium"], "a/atracurium", false];
 var mivacurium = ["mivacurium", ["Mivacron"], "m/mivacurium", false];
+
+// Locals
+var articaïne = ["articaïne", ["_(met adrenaline)", "Ultracain"], "a/articaine_adrenaline", false];
+var bupivacaïne = ["bupivacaïne", ["Marcaine"], "b/bupivacaine", false];
+var ropivacaïne = ["ropivacaïne", [], "r/ropivacaine", false];
+var lidocaïne = ["lidocaïne", ["Xylocaïne"], "l/lidocaine__parenteraal_", false];
+var prilocaïne = ["prilocaïne", ["Prilotekal", "Citanest"], "p/prilocaine", false];
