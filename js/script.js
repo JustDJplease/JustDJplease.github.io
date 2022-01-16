@@ -179,13 +179,40 @@ $(document).ready(function() {
 function registerTable(id, url, sortableColums){
     $("#" + id).DataTable({
         "ajax": 'content/tables/' + url,
-        "drawCallback": function(settings){replacePlaceholders();},
         "searching":true,
         "dom": 't',
         "paging": false,
         "ordering": true,
         "order": [[0, 'asc']],
-        "columnDefs": [{orderable: false, targets: sortableColums}],
+        "columnDefs": [
+        {
+            // Sorting disabled.
+            "targets": 1,
+            "orderable": false,
+        },
+        {
+            // Replacing medication with a placeholder.
+            "targets": 0,
+            "render": function (data, type, row, meta){
+                var output = inject(data, false);
+                return output;
+            }
+        },
+        {
+            // Creating lists.
+            "targets": 1,
+            "render": function (data, type, row, meta){
+            var output = "";
+                if(Array.isArray(data)){
+                    var output = '<ul class="tbl-list">';
+                    data.forEach(item => output += '<li>' + item + "</li>");
+                    output += '</ul">';
+                }else{
+                    output = data;
+                }
+                return output;
+            }
+        }],
         "info": false
     });
 }

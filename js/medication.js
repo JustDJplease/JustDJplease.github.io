@@ -46,6 +46,41 @@ function replace(object, simple){
     placeholderObject.replaceWith(output);
 }
 
+// --> (Internal) replace a placeholder with its value.
+function inject(name, simple){
+    var output = "";
+    var medObject = window[name];
+
+    if (medObject === undefined){
+        output = "<mark>undefined</mark>";
+    } else if (medObject.length !== 4){
+        output = "<mark>wrong placeholder</mark>";
+    } else {
+        var _medName = medObject[0];
+        var _medRegs = medObject[1];
+        var _medLink = medObject[2];
+        var _medAnti = medObject[3];
+
+        if(_medAnti){
+            output = "<ul class=\"tbl-list\"><li><a class=\"text-red\" href=\"https://www.farmacotherapeutischkompas.nl/bladeren/preparaatteksten/" + _medLink + "\">" + _medName + "</a></li>";
+        }else{
+            output = "<ul class=\"tbl-list\"><li><a href=\"https://www.farmacotherapeutischkompas.nl/bladeren/preparaatteksten/" + _medLink + "\">" + _medName + "</a></li>";
+        }
+        if(!simple){
+            _medRegs.forEach(_reg => {
+                if(_reg.startsWith("_")){
+                    output = output + "<li>" + _reg.substring(1); + "</li>";
+                }else{
+                    output = output + "<li>&reg; " + _reg+ "</li>";
+                }
+            });
+        }
+        output = output + "</ul>";
+    }
+    return output;
+}
+
+
 // Declaration of medication objects:
 // (0) - Name - String
 // (1) - Registered names - Array
