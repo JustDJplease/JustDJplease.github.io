@@ -2,43 +2,43 @@
   "data": [
     [
       "adrenaline",
-      "&alpha;<sub>1</sub>, &beta;<sub>1</sub> en &beta;<sub>2</sub>"
+      "&alpha;1, &beta;1 en &beta;2"
     ],
     [
       "noradrenaline",
-      "&alpha;<sub>1</sub> (enige &beta;<sub>1</sub> en &beta;<sub>2</sub>)"
+      "&alpha;1 (enige &beta;1 en &beta;2)"
     ],
     [
       "fenylefrine",
-      "&alpha;<sub>1</sub>"
+      "&alpha;1"
     ],
     [
       "efedrine",
-      "(via nor) &alpha;<sub>1</sub> (en enige &beta;<sub>1</sub> en &beta;<sub>2</sub>"
+      "(via nor) &alpha;1 (en enige &beta;1 en &beta;2"
     ],
     [
       "dopamineLaag",
-      "D en &beta;<sub>1</sub>"
+      "D en &beta;1"
     ],
     [
       "dopamineHoog",
-      "&alpha;<sub>1</sub>"
+      "&alpha;1"
     ],
     [
       "dobutamine",
-      "&beta;<sub>1</sub> (en enige &beta;<sub>2</sub>)"
+      "&beta;1 (en enige &beta;2)"
     ],
     [
       "milrinon",
-      "(indirect) &beta;<sub>1</sub> (en enige &beta;<sub>2</sub>)"
+      "(indirect) &beta;1 (en enige &beta;2)"
     ],
     [
       "desmopressine",
-      "V<sub>1</sub> en V<sub>2</sub>"
+      "V1 en V2"
     ],
     [
       "isoprenaline",
-      "&beta;<sub>1</sub> en &beta;<sub>2</sub>"
+      "&beta;1 en &beta;2"
     ]
   ]
 }
