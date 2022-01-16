@@ -176,7 +176,7 @@ $(document).ready(function() {
 // DATA TABLE API                     //
 // ---------------------------------- //
 
-function registerTable(id, url, sortableColums){
+function registerTable(id, url, notSortableColums){
     $("#" + id).DataTable({
         "ajax": 'content/tables/' + url,
         "searching":true,
@@ -187,7 +187,7 @@ function registerTable(id, url, sortableColums){
         "columnDefs": [
         {
             // Sorting disabled.
-            "targets": 1,
+            "targets": notSortableColums,
             "orderable": false,
         },
         {
@@ -218,7 +218,7 @@ function registerTable(id, url, sortableColums){
 }
 
 function filterGlobal() {
-    $('table').DataTable().search(
+    $('.searchable').DataTable().search(
         $('.data-title input').val()
     ).draw();
 }

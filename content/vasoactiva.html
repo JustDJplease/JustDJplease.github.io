@@ -14,9 +14,18 @@
         hidden>
 </article>
 
+<script>
+$(document).ready( function () {
+    registerTable("data-vasoactiva", "tblVasoActiva.json", 1);
+    registerSearchBox("globalFilter");
+});
+</script>
+
 <h1>Vasoactiva</h1>
-<h2>Receptoren</h2>
-<div class="tbl-header">
+<div class="data-table">
+    <div class="data-title">
+        <h2>Receptoren</h2>
+    </div>
     <table>
         <thead>
         <tr>
@@ -24,10 +33,6 @@
             <th><strong>Effect</strong></th>
         </tr>
         </thead>
-    </table>
-</div>
-<div class="tbl-content">
-    <table>
         <tbody>
         <tr>
             <td>&alpha;<sub>1</sub></td>
@@ -51,61 +56,16 @@
         </tr>
         </tbody>
     </table>
-</div>
-<h2>Medicatie</h2>
-<div class="tbl-header">
-    <table>
+    <div class="data-title">
+        <h2>Intraveneuze medicatie</h2>
+        <input type="search" placeholder="Search"/>
+    </div>
+    <table id="data-vasoactiva" class="searchable">
         <thead>
         <tr>
-            <th><strong>Medicatie</strong></th>
-            <th><strong>Effect site</strong></th>
+            <th>Medicatie</th>
+            <th>Effect site</th>
         </tr>
         </thead>
-    </table>
-</div>
-<div class="tbl-content">
-    <table>
-        <tbody>
-        <tr>
-            <td><p class="placeholder" data-name="adrenaline"></p></td>
-            <td>&alpha;<sub>1</sub>, &beta;<sub>1</sub> en &beta;<sub>2</sub></td>
-        </tr>
-        <tr>
-            <td><p class="placeholder" data-name="noradrenaline"></p></td>
-            <td>&alpha;<sub>1</sub> (enige &beta;<sub>1</sub> en &beta;<sub>2</sub>)</td>
-        </tr>
-        <tr>
-            <td><p class="placeholder" data-name="fenylefrine"></p></td>
-            <td>&alpha;<sub>1</sub></td>
-        </tr>
-        <tr>
-            <td><p class="placeholder" data-name="efedrine"></p></td>
-            <td>(via noradrenaline) &alpha;<sub>1</sub> (en enige &beta;<sub>1</sub> en &beta;<sub>2</sub>)</td>
-        </tr>
-        <tr>
-            <td><p class="placeholder" data-name="dopamineLaag"></p></td>
-            <td>D en &beta;<sub>1</sub></td>
-        </tr>
-        <tr>
-            <td><p class="placeholder" data-name="dopamineHoog"></p></td>
-            <td>&alpha;<sub>1</sub></td>
-        </tr>
-        <tr>
-            <td><p class="placeholder" data-name="dobutamine"></p></td>
-            <td>&beta;<sub>1</sub> (en enige &beta;<sub>2</sub>)</td>
-        </tr>
-        <tr>
-            <td><p class="placeholder" data-name="milrinon"></p></td>
-            <td>(indirect) &beta;<sub>1</sub> (en enige &beta;<sub>2</sub>)</td>
-        </tr>
-        <tr>
-            <td><p class="placeholder" data-name="desmopressine"></p></td>
-            <td>V<sub>1</sub> en V<sub>2</sub></td>
-        </tr>
-        <tr>
-            <td><p class="placeholder" data-name="isoprenaline"></p></td>
-            <td>&beta;<sub>1</sub> en &beta;<sub>2</sub></td>
-        </tr>
-        </tbody>
     </table>
 </div>

@@ -334,6 +334,8 @@
  .data-table table {
     margin-top: 10px;
     margin-bottom: 10px;
+    border-spacing: 2px !important;
+    border-collapse: separate !important;
 }
 
  .data-table thead {
