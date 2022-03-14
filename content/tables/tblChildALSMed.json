@@ -1,0 +1,49 @@
+{
+  "data": [
+    [
+      "adrenaline",
+      "1:10.000 (0,1 mg/ml)",
+      "0,01 mg/kg"
+    ],
+    [
+      "atropine",
+      "0,5 mg/ml",
+      "0,02 mg/kg (min 0,1 mg)"
+    ],
+    [
+      "amiodaron",
+      "50 mg/ml",
+      "5 mg/kg"
+    ],
+    [
+      "etomidaat",
+      "2 mg/ml",
+      "0,3 mg/kg"
+    ],
+    [
+      "esketamine",
+      "25 mg/ml",
+      "1 mg/kg"
+    ],
+    [
+      "rocuronium",
+      "10 mg/ml",
+      "0,8 mg/kg"
+    ],
+    [
+      "succinylcholine",
+      "50 mg/ml",
+      "1 mg/kg"
+    ],
+    [
+      "glucose",
+      "0,1 gr/ml (10%)",
+      "0,5 gr/kg"
+    ],
+    [
+      "bicarbonaat",
+      "1 mmol/L (8,4%)",
+      "1 mmol/kg"
+    ]
+  ]
+}

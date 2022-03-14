@@ -1,0 +1,20 @@
+{
+  "data": [
+    [
+      "Neonaat",
+      "4 ml/kg/uur"
+    ],
+    [
+      "<10 kg",
+      "4 ml/kg/uur"
+    ],
+    [
+      "10-20 kg",
+      "40 + 2 ml/kg (per kg >10 kg)"
+    ],
+    [
+      ">20 kg",
+      "60 + 1 ml/kg (per kg >20 kg)"
+    ]
+  ]
+}

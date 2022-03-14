@@ -105,6 +105,7 @@ var propofol = ["propofol", ["Diprivan"], "p/propofol", false];
 var thiopental = ["thiopental", [], "t/thiopental", false];
 
 // Vasoactive
+var atropine = ["atropine", [], "a/atropine__systemisch_", false];
 var adrenaline = ["adrenaline", [], "a/adrenaline", false];
 var desmopressine = ["desmopressine", ["_Vasopressine"], "d/desmopressine", false];
 var dobutamine = ["dobutamine", [], "d/dobutamine", false];
@@ -129,3 +130,8 @@ var bupivacaïne = ["bupivacaïne", ["Marcaine"], "b/bupivacaine", false];
 var ropivacaïne = ["ropivacaïne", [], "r/ropivacaine", false];
 var lidocaïne = ["lidocaïne", ["Xylocaïne"], "l/lidocaine__parenteraal_", false];
 var prilocaïne = ["prilocaïne", ["Prilotekal", "Citanest"], "p/prilocaine", false];
+
+// Emergency
+var amiodaron = ["amiodaron", ["Cordarone"], "a/amiodaron", false];
+var glucose = ["glucose", ["_C<sub>6</sub>H<sub>12</sub>O<sub>6</sub>"], "?/?", false];
+var bicarbonaat = ["natriumbicarbonaat", ["_NaHCO<sub>3</sub>"], "?/?", false];

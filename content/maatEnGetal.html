@@ -15,34 +15,32 @@
 </article>
 
 <script>
-$(document).ready(function(){
-
-    $('.tbl-header').click(function(){
-        console.log('click');
-        var bodyId = '#' + $(this).data('id');
-        console.log(bodyId);
-        if($(bodyId).is(':hidden')){
-            $(bodyId).slideDown();
-        }else{
-            $(bodyId).slideUp();
-        }
-    });
+$(document).ready( function () {
+    registerTable("data-childALSMed", "tblChildALSMed.json");
+    registerParameterTable("data-childSystolicPressure", "tblChildSystolicPressure.json");
+    registerParameterTable("data-childHeartFreq", "tblChildHeartFreq.json");
+    registerParameterTable("data-childFluids", "tblChildFluids.json");
+    registerParameterTable("data-childVolumes", "tblChildVolumes.json");
+    registerParameterTable("data-childAdemFreq", "tblChildAdemFreq.json");
+    registerParameterTable("data-childLMA", "tblChildLMA.json");
+    registerParameterTable("data-childTubeConv", "tblChildTubeConv.json");
+    registerParameterTable("data-childTubeMicro", "tblChildTubeMicro.json");
+    registerSearchBox("globalFilter");
 });
 </script>
 
-<h1>Maat & Getal bij kinderen</h1>
-<h2>Algemeen</h2>
-<div class="tbl-header" data-id="alg">
+<h1>Maat & Getal</h1>
+<div class="data-table">
+    <div class="data-title">
+        <h2>Kinderen - Spoedformules</h2>
+    </div>
     <table>
         <thead>
         <tr>
-            <th>Spoedformules kinderen</th>
+            <th>Formule</th>
+            <th>Berekening</th>
         </tr>
         </thead>
-    </table>
-</div>
-<div class="tbl-content" id="alg" hidden>
-    <table>
         <tbody>
         <tr>
             <td>Gewicht in kg (Zuigeling)</td>
@@ -69,10 +67,6 @@ $(document).ready(function(){
             <td>15 + (0,5 x lft in jr)</td>
         </tr>
         <tr>
-            <td>Adrenaline P-ALS</td>
-            <td>10 &mu;g/kg</td>
-        </tr>
-        <tr>
             <td>Vochtbolus P-ALS</td>
             <td>20 ml/kg</td>
         </tr>
@@ -87,456 +81,147 @@ $(document).ready(function(){
         </tbody>
     </table>
 </div>
-<br/>
-<div class="tbl-header" data-id="med">
-    <table>
+
+<div class="data-table">
+    <div class="data-title">
+        <h2>Kinderen - Noodmedicatie</h2>
+        <input type="search" placeholder="Search"/>
+    </div>
+    <table id="data-childALSMed" class="searchable">
         <thead>
         <tr>
-            <th>Doseringen kinderen</th>
+            <th>Medicament</th>
+            <th>Bereiding</th>
+            <th>Dosering</th>
         </tr>
         </thead>
     </table>
 </div>
-<div class="tbl-content" id="med" hidden>
-    <table>
-        <tbody>
-        <tr>
-            <td><b>medicament</b></td>
-            <td><b>bereiding</b></td>
-            <td><b>dosering</b></td>
-        </tr>
-        <tr>
-            <td>adrenaline</td>
-            <td>1:10.000 (0,1 ml/ml)</td>
-            <td>0,01 mg/kg</td>
-        </tr>
-        <tr>
-            <td>atropine</td>
-            <td>0,5 ml/ml</td>
-            <td>0,02 mg/kg (min. 0,1 mg)</td>
-        </tr>
-        <tr>
-            <td>amiodaron</td>
-            <td>50 mg/ml</td>
-            <td>5 mg/kg</td>
-        </tr>
-        <tr>
-            <td>vochtbolus</td>
-            <td>NaCl 0,9%/Ringer</td>
-            <td>20 ml/kg</td>
-        </tr>
-        <tr>
-            <td>etomidaat</td>
-            <td>2 mg/ml</td>
-            <td>0,3 mg/kg</td>
-        </tr>
-        <tr>
-            <td>esketamine</td>
-            <td>25 mg/ml</td>
-            <td>1 mg/kg</td>
-        </tr>
-        <tr>
-            <td>rocuronium</td>
-            <td>10 mg/ml</td>
-            <td>0,8 mg/kg</td>
-        </tr>
-        <tr>
-            <td>suxamethonium</td>
-            <td>50 mg/ml</td>
-            <td>1 mg/kg</td>
-        </tr>
-        <tr>
-            <td>glucose</td>
-            <td>0,1 gr/ml (10%)</td>
-            <td>0,5 gr/kg</td>
-        </tr>
-        <tr>
-            <td>bicarbonaat</td>
-            <td>1 mmol/L (8,4%)</td>
-            <td>1 mmol/kg</td>
-        </tr>
-        </tbody>
-    </table>
-</div>
+
 <br/>
 <h2><span class="text-box-red">A</span> Airway</h2>
-<div class="tbl-header" data-id="etc">
-    <table>
+<div class="data-table">
+    <div class="data-title">
+        <h2>Kinderen - Tube</h2>
+        <input type="search" placeholder="Search"/>
+    </div>
+    <table id="data-childTubeConv" class="searchable">
         <thead>
         <tr>
-            <th>Endotracheale tube (conventioneel)</th>
+            <th>Gewicht/Leeftijd</th>
+            <th>Maat</th>
+            <th>Diepte</th>
         </tr>
         </thead>
     </table>
 </div>
-<div class="tbl-content" id="etc" hidden>
-    <table>
-        <tbody>
-        <tr>
-            <td class="tbl-centered"><b> Gewicht of leeftijd</b></td>
-            <td class="tbl-centered"><b> Tubemaat (ID)</b></td>
-            <td class="tbl-centered"><b> Diepte in cm</b></td>
-        </tr>
-        <tr>
-            <td> &lt; 800 g</td>
-            <td> 2</td>
-            <td> tandenrij</td>
-        </tr>
-        <tr>
-            <td> 1 kg</td>
-            <td> 2,5</td>
-            <td> 7</td>
-        </tr>
-        <tr>
-            <td> &lt; 2 kg</td>
-            <td> 2,5</td>
-            <td> 8</td>
-        </tr>
-        <tr>
-            <td> &lt; 3 kg</td>
-            <td> 3</td>
-            <td> 9</td>
-        </tr>
-        <tr>
-            <td> 3 kg &ndash; 6 mnd.</td>
-            <td> 3,5</td>
-            <td> 10</td>
-        </tr>
-        <tr>
-            <td> 6 &ndash; 12 mnd.</td>
-            <td> 3,5 - 4</td>
-            <td> 11 - 12</td>
-        </tr>
-        <tr>
-            <td> 1 &ndash; 2 jr.</td>
-            <td> 4,5 - 5</td>
-            <td> 12 - 13</td>
-        </tr>
-        <tr>
-            <td> 2 &ndash; 4 jr.</td>
-            <td> 5 - 5,5</td>
-            <td> 13 - 14</td>
-        </tr>
-        <tr>
-            <td> 4 &ndash; 6 jr.</td>
-            <td> 5,5 - 6</td>
-            <td> 14 - 15</td>
-        </tr>
-        <tr>
-            <td> 6 &ndash; 8 jr.</td>
-            <td> 6 - 6,5</td>
-            <td> 15 - 16</td>
-        </tr>
-        <tr>
-            <td> 8 &ndash; 10 jr.</td>
-            <td> 5,5 - 6 met cuff</td>
-            <td> 16 - 17</td>
-        </tr>
-        <tr>
-            <td> 10 &ndash; 12 jr.</td>
-            <td> 6 - 6,5 met cuff</td>
-            <td> 18 - 19</td>
-        </tr>
-        </tbody>
-    </table>
-</div>
-<br/>
-<div class="tbl-header" data-id="etm">
-    <table>
+
+<div class="data-table">
+    <div class="data-title">
+        <h2>Kinderen - Tube (Microcuff&reg;)</h2>
+        <input type="search" placeholder="Search"/>
+    </div>
+    <table id="data-childTubeMicro" class="searchable">
         <thead>
         <tr>
-            <th>Endotracheale tube (Microcuff&reg;)</th>
+            <th>Leeftijd</th>
+            <th>Maat</th>
         </tr>
         </thead>
     </table>
 </div>
-<div class="tbl-content" id="etm" hidden>
-    <table>
-        <tbody>
-        <tr>
-            <td class="tbl-centered"><b>Tubemaat ID (mm)</b></td>
-            <td class="tbl-centered"><b>Leeftijd/gewicht jaren/kg</b></td>
-        </tr>
-        <tr>
-            <td> 3,0</td>
-            <td> &agrave; terme &ge; 3 kg tot &lt; 8 mnd</td>
-        </tr>
-        <tr>
-            <td> 3,5</td>
-            <td> 8 mnd tot &lt; 2 jaar</td>
-        </tr>
-        <tr>
-            <td> 4,0</td>
-            <td> 2 tot &lt; 4 jr.</td>
-        </tr>
-        <tr>
-            <td> 4,5</td>
-            <td> 4 tot &lt; 6 jr.</td>
-        </tr>
-        <tr>
-            <td> 5,0</td>
-            <td> 6 tot &lt; 8 jr.</td>
-        </tr>
-        <tr>
-            <td> 5,5</td>
-            <td> 8 tot &lt; 10 jr.</td>
-        </tr>
-        <tr>
-            <td> 6,0</td>
-            <td> 10 tot &lt; 12 jr.</td>
-        </tr>
-        <tr>
-            <td> 6,6</td>
-            <td> 12 tot &lt; 14 jr.</td>
-        </tr>
-        <tr>
-            <td> 7,0</td>
-            <td> 14 tot &lt; 16 jr.</td>
-        </tr>
-        <tr>
-            <td colspan="2">
-                Opmerking: inflatiedruk ballon &le; 20 cm H2O
-            </td>
-        </tr>
-        </tbody>
-    </table>
-</div>
-<br/>
-<div class="tbl-header" data-id="lma">
-    <table>
+
+<div class="data-table">
+    <div class="data-title">
+        <h2>Kinderen - LMA's</h2>
+        <input type="search" placeholder="Search"/>
+    </div>
+    <table id="data-childLMA" class="searchable">
         <thead>
         <tr>
-            <th>Larynxmaskers</th>
+            <th>Gewicht</th>
+            <th>Maat</th>
         </tr>
         </thead>
     </table>
 </div>
-<div class="tbl-content" id="lma" hidden>
-    <table>
-        <tbody>
-        <tr>
-            <td class="tbl-centered"><b> Gewicht in kg </b></td>
-            <td class="tbl-centered"><b> Maat </b></td>
-            <td class="tbl-centered"><b> Volume ml </b></td>
-        </tr>
-        <tr>
-            <td> &lt; 5</td>
-            <td> 1</td>
-            <td> 2 - 4</td>
-        </tr>
-        <tr>
-            <td> 5 - 10</td>
-            <td> 1,5</td>
-            <td> &lt; 6</td>
-        </tr>
-        <tr>
-            <td> 10 - 20</td>
-            <td> 2</td>
-            <td> &lt; 10</td>
-        </tr>
-        <tr>
-            <td> 15 - 30</td>
-            <td> 2,5</td>
-            <td> &lt; 15</td>
-        </tr>
-        <tr>
-            <td> &gt; 30</td>
-            <td> 3</td>
-            <td> &lt; 25</td>
-        </tr>
-        <tr>
-            <td> Volwassene</td>
-            <td> 4</td>
-            <td> &lt; 35</td>
-        </tr>
-        </tbody>
-    </table>
-</div>
+
 <br/>
 <h2><span class="text-box-red">B</span> Breathing</h2>
-<div class="tbl-header" data-id="ahm">
-    <table>
+<div class="data-table">
+    <div class="data-title">
+        <h2>Kinderen - Ademfrequentie</h2>
+        <input type="search" placeholder="Search"/>
+    </div>
+    <table id="data-childAdemFreq" class="searchable">
         <thead>
         <tr>
-            <th>Ademhalingsfrequentie in rust naar leeftijdsgroep</th>
+            <th>Leeftijd</th>
+            <th>Frequentie</th>
         </tr>
         </thead>
     </table>
 </div>
-<div class="tbl-content" id="ahm" hidden>
-    <table>
-        <tbody>
-        <tr>
-            <td class="tbl-centered"><b> Leeftijd </b></td>
-            <td class="tbl-centered"><b> Ademfrequentie per minuut </b></td>
-        </tr>
-        <tr>
-            <td> &lt; 1 jaar</td>
-            <td> 35-40</td>
-        </tr>
-        <tr>
-            <td> 1-2 jaar</td>
-            <td> 25-35</td>
-        </tr>
-        <tr>
-            <td> 2-5 jaar</td>
-            <td> 25-30</td>
-        </tr>
-        <tr>
-            <td> 5-12 jaar</td>
-            <td> 20-25</td>
-        </tr>
-        <tr>
-            <td> &gt; 12 jaar</td>
-            <td> 15-20</td>
-        </tr>
-        </tbody>
-    </table>
-</div>
+
 <br/>
 <h2><span class="text-box-red">C</span> Circulation</h2>
-<div class="tbl-header" data-id="bld">
-    <table>
+<div class="data-table">
+    <div class="data-title">
+        <h2>Kinderen - Volumes</h2>
+        <input type="search" placeholder="Search"/>
+    </div>
+    <table id="data-childVolumes" class="searchable">
         <thead>
         <tr>
-            <th>Bloed & volumes</th>
+            <th>Parameter</th>
+            <th>Waarde</th>
         </tr>
         </thead>
     </table>
 </div>
-<div class="tbl-content" id="bld" hidden>
-    <table>
-        <tbody>
-        <tr>
-            <td> Bloedvolume (EBV)<br />neonaat</td>
-            <td> 80 -90 ml/kg</td>
-        </tr>
-        <tr>
-            <td> Bloedvolume (EBV)<br />als &gt; 3 maanden oud</td>
-            <td> 70 &ndash; 80 ml/kg</td>
-        </tr>
-        <tr>
-            <td> Max. bloedverlies</td>
-            <td class="tbl-centered">EBV &times; (Hb<sub>nu</sub>– Hb<sub>min</sub>)<br/><hr> Hb<sub>nu</sub></td>
-        </tr>
-        <tr>
-            <td> Extracellulaire volume</td>
-            <td> 20 (in %)</td>
-        </tr>
-        <tr>
-            <td> Cardiac output</td>
-            <td> 250 ml/kg/min</td>
-        </tr>
-        </tbody>
-    </table>
-</div>
-<br/>
-<div class="tbl-header" data-id="vgt">
-    <table>
+
+<div class="data-table">
+    <div class="data-title">
+        <h2>Kinderen - Vochtbehoefte</h2>
+        <input type="search" placeholder="Search"/>
+    </div>
+    <table id="data-childFluids" class="searchable">
         <thead>
         <tr>
-            <th>Vochtbehoefte</th>
+            <th>Gewicht</th>
+            <th>Behoefte</th>
         </tr>
         </thead>
     </table>
 </div>
-<div class="tbl-content" id="vgt" hidden>
-    <table>
-        <tbody>
-        <tr>
-            <td class="tbl-centered"><b> Gewicht</b></td>
-            <td class="tbl-centered"><b> ml/kg/uur</b></td>
-        </tr>
-        <tr>
-            <td> Neonaat</td>
-            <td> 4</td>
-        </tr>
-        <tr>
-            <td> &lt; 10 kg</td>
-            <td> 4</td>
-        </tr>
-        <tr>
-            <td> 10 &ndash; 20 kg</td>
-            <td> 40 + 2 ml/kg (per kg &gt; 10 kg)</td>
-        </tr>
-        <tr>
-            <td> &gt; 20 kg</td>
-            <td> 60 + 1 ml/kg (per kg &gt; 20 kg)</td>
-        </tr>
-        </tbody>
-    </table>
-</div>
-<br/>
 
 
-<div class="tbl-header" data-id="hrm">
-    <table>
+<div class="data-table">
+    <div class="data-title">
+        <h2>Kinderen - Hartfrequentie</h2>
+        <input type="search" placeholder="Search"/>
+    </div>
+    <table id="data-childHeartFreq" class="searchable">
         <thead>
         <tr>
-            <th>Normale hartfrequentie per minuut</th>
+            <th>Leeftijd</th>
+            <th>Frequentie</th>
         </tr>
         </thead>
     </table>
 </div>
-<div class="tbl-content" id="hrm" hidden>
-    <table>
-        <tbody>
-        <tr>
-            <td> &lt; 1 jaar</td>
-            <td> 110-180</td>
-        </tr>
-        <tr>
-            <td> 1-2 jaar</td>
-            <td> 100-150</td>
-        </tr>
-        <tr>
-            <td> 2-5 jaar</td>
-            <td> 95-140</td>
-        </tr>
-        <tr>
-            <td> 5-12 jaar</td>
-            <td> 80-120</td>
-        </tr>
-        <tr>
-            <td> &gt; 12 jaar</td>
-            <td> 60-100</td>
-        </tr>
-        </tbody>
-    </table>
-</div>
-<br/>
-<div class="tbl-header" data-id="sbd">
-    <table>
+
+<div class="data-table">
+    <div class="data-title">
+        <h2>Kinderen - Systolische bloeddruk</h2>
+        <input type="search" placeholder="Search"/>
+    </div>
+    <table id="data-childSystolicPressure" class="searchable">
         <thead>
         <tr>
-            <th>Normale systolische bloeddruk in mm Hg</th>
+            <th>Leeftijd</th>
+            <th>Systole</th>
         </tr>
         </thead>
-    </table>
-</div>
-<div class="tbl-content" id="sbd" hidden>
-    <table>
-        <tbody>
-        <tr>
-            <td> &lt; 1 jaar</td>
-            <td> 70-90</td>
-        </tr>
-        <tr>
-            <td> 1-2 jaar</td>
-            <td> 80-95</td>
-        </tr>
-        <tr>
-            <td> 2-5 jaar</td>
-            <td> 80-100</td>
-        </tr>
-        <tr>
-            <td> 5-12 jaar</td>
-            <td> 90-110</td>
-        </tr>
-        <tr>
-            <td> &gt; 12 jaar</td>
-            <td> 100-120</td>
-        </tr>
-        </tbody>
     </table>
 </div>

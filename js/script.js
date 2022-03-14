@@ -176,6 +176,34 @@ $(document).ready(function() {
 // DATA TABLE API                     //
 // ---------------------------------- //
 
+function registerParameterTable(id, url){
+    $("#" + id).DataTable({
+        "ajax": 'content/tables/' + url,
+        "searching":true,
+        "dom": 't',
+        "paging": false,
+        "ordering": false,
+        "order": [[0, 'asc']],
+        "columnDefs": [
+        {
+            // Creating lists.
+            "targets": 1,
+            "render": function (data, type, row, meta){
+            var output = "";
+                if(Array.isArray(data)){
+                    var output = '<ul class="tbl-list">';
+                    data.forEach(item => output += '<li>' + item + "</li>");
+                    output += '</ul">';
+                }else{
+                    output = data;
+                }
+                return output;
+            }
+        }],
+        "info": false
+    });
+}
+
 function registerTable(id, url, notSortableColums){
     $("#" + id).DataTable({
         "ajax": 'content/tables/' + url,
